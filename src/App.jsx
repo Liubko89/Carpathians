@@ -7,19 +7,22 @@ import OurAdvantages from "./components/OurAdvantages/OurAdvantages";
 import Questions from "./components/Questions/Questions";
 import Reviews from "./components/Reviews/Reviews";
 import UpcomingTours from "./components/UpcomingTours/UpcomingTours";
+import Container from "./components/Container/Container";
 
 function App() {
   return (
     <div>
-      <Header />
-      <Hero />
-      <AboutUs />
-      <OurAdvantages />
-      <UpcomingTours />
-      <Reviews />
-      <Gallery />
-      <Questions />
-      <Footer />
+      <Container>
+        <Header />
+        <Hero />
+        <AboutUs />
+        <OurAdvantages />
+        <UpcomingTours />
+        <Reviews />
+        <Gallery />
+        <Questions />
+        <Footer />
+      </Container>
     </div>
   );
 }
