@@ -8,13 +8,16 @@ import Questions from "./components/Questions/Questions";
 import Reviews from "./components/Reviews/Reviews";
 import UpcomingTours from "./components/UpcomingTours/UpcomingTours";
 import Container from "./components/Container/Container";
+import HeroWrapper from "./components/HeroWrapper/HeroWrapper";
 
 function App() {
   return (
     <div>
-      <Container>
+      <HeroWrapper>
         <Header />
         <Hero />
+      </HeroWrapper>
+      <Container>
         <AboutUs />
         <OurAdvantages />
         <UpcomingTours />

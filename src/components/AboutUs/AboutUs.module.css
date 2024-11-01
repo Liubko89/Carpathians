@@ -1,0 +1,19 @@
+.aboutUsSection {
+  margin-bottom: 52px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 28px;
+  font-size: 32px;
+  line-height: 1.21;
+}
+
+p {
+  color: var(--secondary-text-c);
+}
+
+.firstParagraph {
+  margin-bottom: 8px;
+}
