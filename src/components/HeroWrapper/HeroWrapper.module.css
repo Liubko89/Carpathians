@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
-  background-color: rgb(206, 190, 190);
+  background-color: var(--spare-bg);
   background-image: url(../../assets/img/mob1x/hero_desk_1920-min.jpg);
   background-position: center;
   background-repeat: no-repeat;

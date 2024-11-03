@@ -1,0 +1,22 @@
+.listItem:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.itemWrapper {
+  background-color: var(--main-c);
+  width: 100%;
+  padding: 10px 0 10px 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  fill: var(--light-c);
+}
+
+.descr {
+  color: var(--light-c);
+  font-size: 14px;
+  line-height: 1.21;
+}

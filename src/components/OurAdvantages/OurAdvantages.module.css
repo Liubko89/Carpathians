@@ -1,0 +1,17 @@
+.OurAdvantagesSection {
+  margin-bottom: 52px;
+}
+
+.title {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.list {
+  padding: 87px 0;
+  background-color: var(--spare-bg);
+  background-image: url(../../assets/img/mob1x/Advantages-min.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

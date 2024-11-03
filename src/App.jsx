@@ -18,12 +18,14 @@ function App() {
         <Hero />
       </HeroWrapper>
       <Container>
-        <AboutUs />
-        <OurAdvantages />
-        <UpcomingTours />
-        <Reviews />
-        <Gallery />
-        <Questions />
+        <main>
+          <AboutUs />
+          <OurAdvantages />
+          <UpcomingTours />
+          <Reviews />
+          <Gallery />
+          <Questions />
+        </main>
         <Footer />
       </Container>
     </div>
