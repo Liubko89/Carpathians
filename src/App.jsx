@@ -23,10 +23,10 @@ function App() {
           <OurAdvantages />
           <UpcomingTours />
           <Reviews />
-          <Gallery />
-          <Questions />
+          {/* <Gallery />
+          <Questions /> */}
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </Container>
     </div>
   );
