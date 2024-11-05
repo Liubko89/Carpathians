@@ -2,7 +2,7 @@ import css from "./Hero.module.css";
 
 const Hero = () => {
   return (
-    <div className={css.hero}>
+    <section className={css.hero}>
       <h1 className={css.title}>Tours to the Carpathians from Lviv</h1>
       <p className={css.descr}>
         Journeys to the very heart of the Carpathians for those who want a real
@@ -11,7 +11,7 @@ const Hero = () => {
       <button className={css.btn} type="button">
         Book a tour
       </button>
-    </div>
+    </section>
   );
 };
 

@@ -4,24 +4,9 @@ import "react-multi-carousel/lib/styles.css";
 import hoverla from "../../assets/img/mob1x/overlay-min.jpg";
 import bukovel from "../../assets/img/mob1x/overlay-1-min.jpg";
 import carpathians from "../../assets/img/mob1x/overlay-2-min.jpg";
+import ButtonGroup from "../ButtonGroup/ButtonGroup";
 
 const UpcomingTours = () => {
-  const ButtonGroup = ({ next, previous, ...rest }) => {
-    const {
-      carouselState: { currentSlide },
-    } = rest;
-    return (
-      <div className="carousel-button-group">
-        <button
-          className={`${css.prevBtn} ${currentSlide === 0 ? css.hidden : ""}`}
-          onClick={() => previous()}
-        >
-          1
-        </button>
-        <button onClick={() => next()}>2</button>
-      </div>
-    );
-  };
   const responsive = {
     desktop: {
       breakpoint: { max: 1440, min: 768 },
@@ -37,7 +22,7 @@ const UpcomingTours = () => {
     },
   };
   return (
-    <div className={css.section}>
+    <section className={css.section}>
       <h2 className={css.title}>Upcoming tours</h2>
       <Carousel
         responsive={responsive}
@@ -74,7 +59,7 @@ const UpcomingTours = () => {
           </div>
         </div>
       </Carousel>
-    </div>
+    </section>
   );
 };
 

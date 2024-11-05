@@ -2,3 +2,7 @@
 .react-multiple-carousel__arrow--right {
   bottom: -24px;
 }
+
+.react-multi-carousel-list {
+  margin-bottom: 24px;
+}

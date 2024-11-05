@@ -1,0 +1,65 @@
+.btnGroup {
+  position: relative;
+}
+
+.prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+}
+
+.prevBtn,
+.nextBtn {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prevBtn:hover {
+  rotate: -360deg;
+}
+
+.nextBtn:hover {
+  rotate: 360deg;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  border: 2px solid transparent;
+  background: linear-gradient(var(--light-c), var(--light-c)) padding-box,
+    linear-gradient(
+        45deg,
+        var(--main-c),
+        var(--secondary-text-c),
+        var(--light-c),
+        var(--main-c),
+        var(--secondary-text-c),
+        var(--light-c)
+      )
+      border-box;
+}
+
+.prevIcon,
+.nextIcon {
+  pointer-events: none;
+  fill: var(--main-c);
+}
+
+.hidden {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}

@@ -3,7 +3,7 @@ import OurAdvantagesListItem from "../OurAdvantagesListItem/OurAdvantagesListIte
 
 const OurAdvantages = () => {
   return (
-    <div className={css.OurAdvantagesSection}>
+    <section className={css.OurAdvantagesSection}>
       <h2 className={css.title}>Our advantages</h2>
       <ul className={css.list}>
         <OurAdvantagesListItem string={"author's tours"} />
@@ -13,7 +13,7 @@ const OurAdvantages = () => {
         <OurAdvantagesListItem string={"professional guides"} />
         <OurAdvantagesListItem string={"accommodation in hotels from 3+ *"} />
       </ul>
-    </div>
+    </section>
   );
 };
 

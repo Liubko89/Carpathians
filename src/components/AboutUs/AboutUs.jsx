@@ -2,7 +2,7 @@ import css from "./AboutUs.module.css";
 
 const AboutUs = () => {
   return (
-    <div className={css.aboutUsSection}>
+    <section className={css.aboutUsSection}>
       <h2 className={css.title}>About us</h2>
       <p className={css.firstParagraph}>
         Travel is our life. We have been organizing tours to the Carpathians
@@ -17,7 +17,7 @@ const AboutUs = () => {
         offer magical landscapes and allow you to forget about all problems and
         unnecessary thoughts.
       </p>
-    </div>
+    </section>
   );
 };
 
