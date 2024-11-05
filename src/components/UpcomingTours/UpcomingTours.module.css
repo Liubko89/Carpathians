@@ -10,7 +10,7 @@
 }
 
 .itemWrapper {
-  border: 1px solid var(--main-c);
+  border: 2px solid var(--main-c);
 }
 
 .img {
