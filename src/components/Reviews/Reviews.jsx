@@ -21,6 +21,11 @@ const Reviews = () => {
               <h3 className={css.listTitle}>Maria</h3>
               <p className={css.descr}>{firstReview}</p>
             </div>
+            <button className={css.btn} onClick={() => setOverlay(!overlay)}>
+              <svg className={css.icon} width="26" height="16">
+                <use href={`${icons}#icon-round`}></use>
+              </svg>
+            </button>
             <div
               className={
                 overlay ? `${css.turnArround} ${css.overlay}` : css.overlay
@@ -28,11 +33,6 @@ const Reviews = () => {
             >
               <img className={css.overlayImg} src={photoMaria} alt="photo" />
             </div>
-            <button className={css.btn} onClick={() => setOverlay(!overlay)}>
-              <svg className={css.icon} width="26" height="16">
-                <use href={`${icons}#icon-round`}></use>
-              </svg>
-            </button>
           </div>
         </li>
         <li></li>

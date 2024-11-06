@@ -13,6 +13,7 @@
   position: relative;
   border: 2px solid var(--main-c);
   overflow: hidden;
+  pointer-events: visible;
 }
 
 .content {
@@ -48,13 +49,9 @@
   transform: translateX(-100%);
 }
 
-.wrapper:hover > .overlay {
+/* .wrapper:hover > .overlay {
   transform: translateX(0);
-}
-
-.wrapper:active > .overlay {
-  transform: translateX(-100%);
-}
+} */
 
 .turnArround {
   transform: translateX(0);
