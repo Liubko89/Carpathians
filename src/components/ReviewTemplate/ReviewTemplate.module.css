@@ -1,0 +1,86 @@
+.listItem {
+  width: 100%;
+}
+
+.listItem:first-child {
+  margin-bottom: 32px;
+}
+
+.wrapper {
+  position: relative;
+  border: 2px solid var(--main-c);
+  overflow: hidden;
+  pointer-events: visible;
+}
+
+.content {
+  padding: 204px 35px 48px;
+  background-image: url(../../assets/img/mob1x/Review_mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 84px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: transparent;
+}
+
+.listTitle {
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--main-c);
+  font-weight: 600;
+}
+
+.overlay {
+  overflow: hidden;
+  position: absolute;
+  transition: 300ms ease-in-out;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+/* .wrapper:hover > .overlay {
+  transform: translateX(0);
+} */
+
+.turnArround {
+  transform: translateX(0);
+}
+
+.overlayImg {
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+  bottom: 12px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  scale: 1.1;
+}
+
+.icon {
+  fill: var(--main-c);
+  pointer-events: none;
+}
