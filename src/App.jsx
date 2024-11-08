@@ -24,7 +24,7 @@ function App() {
           <UpcomingTours />
           <Reviews />
           <Gallery />
-          {/* <Questions /> */}
+          <Questions />
         </main>
         {/* <Footer /> */}
       </Container>
