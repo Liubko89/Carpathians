@@ -1,7 +1,7 @@
 import icons from "../../assets/icons.svg";
 import css from "./ButtonGroup.module.css";
 
-const ButtonGroup = ({ next, previous, ...rest }) => {
+const ButtonGroup = ({ next, previous, slide, ...rest }) => {
   const {
     carouselState: { currentSlide },
   } = rest;
@@ -16,7 +16,7 @@ const ButtonGroup = ({ next, previous, ...rest }) => {
         </svg>
       </button>
       <button
-        className={`${css.nextBtn} ${currentSlide === 2 ? css.hidden : ""}`}
+        className={`${css.nextBtn} ${currentSlide === slide ? css.hidden : ""}`}
         onClick={() => next()}
       >
         <svg className={css.nextIcon} width="10" height="18">
