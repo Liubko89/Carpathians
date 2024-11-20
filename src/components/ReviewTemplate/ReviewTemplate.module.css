@@ -38,6 +38,7 @@
 }
 
 .overlay {
+  width: 100%;
   overflow: hidden;
   position: absolute;
   transition: 300ms ease-in-out;
@@ -45,10 +46,6 @@
   left: 0;
   transform: translateX(-100%);
 }
-
-/* .wrapper:hover > .overlay {
-  transform: translateX(0);
-} */
 
 .turnArround {
   transform: translateX(0);
@@ -83,4 +80,14 @@
 .icon {
   fill: var(--main-c);
   pointer-events: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper:hover > .overlay {
+    transform: translateX(0);
+  }
+
+  .btn {
+    display: none;
+  }
 }
