@@ -45,14 +45,17 @@
   top: 0;
   left: 0;
   transform: translateX(-100%);
+  height: 100%;
 }
 
 .turnArround {
   transform: translateX(0);
+  height: 100%;
 }
 
 .overlayImg {
   object-fit: cover;
+  height: 100%;
 }
 
 .btn {
