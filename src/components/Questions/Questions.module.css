@@ -4,14 +4,100 @@
   background-image: url(../../assets/img/mob1x/image_3_desk-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   .wrapper {
     padding: 28px 20px;
     background-color: var(--light-c);
     .title {
-      color: red;
-      &:hover {
-        color: blue;
-      }
+      color: var(--primary-text-c);
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .descr {
+      color: var(--secondary-text-c);
+      text-align: center;
+      font-size: 14px;
+      padding: 0 14px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.inputWrapper {
+  padding-bottom: 20px;
+}
+
+.inputWrapper,
+.textareaWrapper {
+  position: relative;
+
+  .error {
+    width: 100%;
+    font-size: 14px;
+    color: var(--error-c);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.input,
+.textarea {
+  width: 100%;
+  height: 28px;
+  color: var(--primary-text-c);
+  border: none;
+  border-bottom: 1px solid var(--border-c);
+  outline: none;
+  background-color: inherit;
+
+  &::placeholder {
+    color: var(--border-c);
+  }
+
+  &:focus {
+    border-color: var(--main-c);
+  }
+
+  &:not(:focus) {
+    color: var(--main-c);
+    background-color: inherit;
+  }
+}
+
+.textareaWrapper {
+  .textarea {
+    resize: none;
+    padding: 0;
+  }
+  margin-bottom: 24px;
+}
+
+.btn {
+  width: 100%;
+  height: 52px;
+  border: none;
+  color: var(--light-c);
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--main-c);
+  transition: 250ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-text-c);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .input,
+  .textarea {
+    font-size: 14px;
+    &::placeholder {
+      font-size: 12px;
     }
   }
 }

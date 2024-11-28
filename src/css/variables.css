@@ -4,4 +4,6 @@
   --secondary-text-c: rgb(32, 35, 33);
   --light-c: rgb(247, 251, 251);
   --spare-bg: rgb(206, 190, 190);
+  --border-c: rgb(163, 165, 163);
+  --error-c: rgb(150, 53, 53);
 }

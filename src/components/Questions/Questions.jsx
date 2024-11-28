@@ -22,13 +22,48 @@ const Questions = () => {
           validationSchema={validationSchema}
         >
           <Form>
-            <Field name="name" type="text" />
-            <ErrorMessage name="name" component="span" />
-            <Field name="phoneNumber" type="text" />
-            <ErrorMessage name="phoneNumber" component="span" />
-            <Field name="question" as="textarea" />
-            <ErrorMessage name="question" component="span" />
-            <button type="submit">Submit</button>
+            <div className={css.inputWrapper}>
+              <Field
+                className={css.input}
+                name="name"
+                type="text"
+                placeholder="Your name*"
+              />
+              <ErrorMessage
+                className={css.error}
+                name="name"
+                component="span"
+              />
+            </div>
+            <div className={css.inputWrapper}>
+              <Field
+                className={css.input}
+                name="phoneNumber"
+                type="text"
+                placeholder="Phone number*"
+              />
+              <ErrorMessage
+                className={css.error}
+                name="phoneNumber"
+                component="span"
+              />
+            </div>
+            <div className={css.textareaWrapper}>
+              <Field
+                className={css.textarea}
+                name="question"
+                as="textarea"
+                placeholder="What would you like to know?"
+              />
+              <ErrorMessage
+                className={css.error}
+                name="question"
+                component="span"
+              />
+            </div>
+            <button className={css.btn} type="submit">
+              Send
+            </button>
           </Form>
         </Formik>
       </div>
