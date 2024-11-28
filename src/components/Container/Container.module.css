@@ -4,3 +4,20 @@
   margin: 0 auto;
   padding: 30px;
 }
+
+.footerWrapper {
+  max-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.heroWrapper {
+  padding: 188px 30px 193px;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: var(--spare-bg);
+  background-image: url(../../assets/img/mob1x/hero_desk_1920-min.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}

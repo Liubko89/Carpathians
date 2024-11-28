@@ -4,9 +4,14 @@
   background-image: url(../../assets/img/mob1x/image_3_desk-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.wrapper {
-  padding: 28px 20px;
-  background-color: var(--light-c);
+  .wrapper {
+    padding: 28px 20px;
+    background-color: var(--light-c);
+    .title {
+      color: red;
+      &:hover {
+        color: blue;
+      }
+    }
+  }
 }

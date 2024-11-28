@@ -1,0 +1,29 @@
+.footer {
+  color: var(--light-c);
+  background-color: var(--secondary-text-c);
+  padding: 40px 44px;
+
+  .title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+
+  .contactsList {
+    margin-bottom: 20px;
+
+    .contact {
+      .addressLink {
+        color: inherit;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+    }
+
+    .contact:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -8,25 +8,28 @@ import Questions from "./components/Questions/Questions";
 import Reviews from "./components/Reviews/Reviews";
 import UpcomingTours from "./components/UpcomingTours/UpcomingTours";
 import Container from "./components/Container/Container";
-import HeroWrapper from "./components/HeroWrapper/HeroWrapper";
 
 function App() {
   return (
     <div>
-      <HeroWrapper>
-        <Header />
-        <Hero />
-      </HeroWrapper>
-      <Container>
-        <main>
+      <Header />
+      <main>
+        <Container heroWrapper>
+          <Hero />
+        </Container>
+        <Container>
           <AboutUs />
           <OurAdvantages />
           <UpcomingTours />
           <Reviews />
           <Gallery />
+        </Container>
+        <Container footerWrapper>
           <Questions />
-        </main>
-        {/* <Footer /> */}
+        </Container>
+      </main>
+      <Container footerWrapper>
+        <Footer />
       </Container>
     </div>
   );
