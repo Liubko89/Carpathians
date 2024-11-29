@@ -1,5 +1,6 @@
 import css from "./Footer.module.css";
 import icons from "../../assets/icons.svg";
+import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
             <svg className={css.icon} width="19" height="27">
               <use href={`${icons}#icon-place`}></use>
             </svg>
-            Lviv, st Dorosheko, 44 k
+            <p className={css.linkDescr}>Lviv, st Dorosheko, 44 k</p>
           </a>
         </li>
         <li className={css.contact}>
@@ -24,7 +25,7 @@ const Footer = () => {
             <svg className={css.icon} width="18" height="29">
               <use href={`${icons}#icon-phone`}></use>
             </svg>
-            +38 (097) 162 -67-90
+            <p className={css.linkDescr}>+38 (097) 162 -67-90</p>
           </a>
         </li>
         <li className={css.contact}>
@@ -32,39 +33,18 @@ const Footer = () => {
             <svg className={css.icon} width="27" height="21">
               <use href={`${icons}#icon-email`}></use>
             </svg>
-            mandrykarpaty@gmail.com
+            <p className={css.linkDescr}>mandrykarpaty@gmail.com</p>
           </a>
         </li>
       </ul>
 
-      <ul>
-        <li>
-          <a href="">
-            <svg className={css.socialLinkIcon} width="33" height="33">
-              <use href={`${icons}#icon-telegram`}></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <svg className={css.socialLinkIcon} width="33" height="33">
-              <use href={`${icons}#icon-instagram`}></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <svg className={css.socialLinkIcon} width="33" height="33">
-              <use href={`${icons}#icon-facebook`}></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <div>
+      <SocialMediaLinks />
+
+      <div className={css.copyRightWrap}>
         <svg className={css.copyRightIcon} width="16" height="16">
           <use href={`${icons}#icon-copyright`}></use>
         </svg>
-        <p>Created by LelekaSoft</p>
+        <p className={css.copyRightDescription}>Created by LelekaSoft</p>
       </div>
     </footer>
   );

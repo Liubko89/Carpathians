@@ -16,14 +16,44 @@
     .contact {
       .addressLink {
         color: inherit;
-        display: flex;
+        display: grid;
+        grid-template-columns: 32px 1fr;
         gap: 4px;
-        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+
+        .icon {
+          fill: var(--light-c);
+          justify-self: center;
+        }
+        .linkDescr {
+          align-self: center;
+          color: inherit;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
     }
 
     .contact:not(:last-child) {
       margin-bottom: 20px;
+    }
+  }
+
+  .copyRightWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    .copyRightIcon {
+      fill: var(--secondary-text-c);
+      stroke: var(--border-c);
+    }
+
+    .copyRightDescription {
+      color: var(--border-c);
     }
   }
 }

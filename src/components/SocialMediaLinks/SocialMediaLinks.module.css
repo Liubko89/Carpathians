@@ -1,0 +1,26 @@
+.socialLinks {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  width: max-content;
+  height: max-content;
+
+  .socialLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+
+  .socialLinkIcon {
+    fill: var(--light-c);
+  }
+}
+
+.vertical {
+  flex-direction: column;
+  margin-bottom: 0;
+}
