@@ -6,5 +6,5 @@
   --spare-bg: rgb(206, 190, 190);
   --border-c: rgb(163, 165, 163);
   --error-c: rgb(150, 53, 53);
-  --bg-c: rgba(32, 35, 33, 0.7);
+  --modal-bg-c: rgba(32, 35, 33, 0.5);
 }
