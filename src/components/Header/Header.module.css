@@ -1,23 +1,27 @@
 .header {
   width: 100%;
   max-width: 375px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 32px;
+  height: 80px;
   position: absolute;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-}
 
-.button {
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
+  .button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.icon {
-  stroke: var(--light-c);
+    .icon {
+      stroke: var(--light-c);
+    }
+  }
 }

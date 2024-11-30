@@ -1,3 +1,7 @@
 .logo {
+  position: absolute;
+  left: 32px;
+  top: 20px;
+  z-index: 999;
   fill: var(--light-c);
 }
