@@ -2,7 +2,7 @@ import css from "./AboutUs.module.css";
 
 const AboutUs = () => {
   return (
-    <section className={css.aboutUsSection}>
+    <section className={css.aboutUsSection} id="aboutUs">
       <h2 className={css.title}>About us</h2>
       <p className={css.firstParagraph}>
         Travel is our life. We have been organizing tours to the Carpathians

@@ -7,7 +7,7 @@ import CarouselSliders from "../CarouselSliders/CarouselSliders";
 
 const UpcomingTours = () => {
   return (
-    <section className={css.section}>
+    <section className={css.section} id="tours">
       <h2 className={css.title}>Upcoming tours</h2>
       <CarouselSliders slide={2}>
         <div className={css.itemWrapper}>

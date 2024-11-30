@@ -12,7 +12,7 @@ const CarouselSliders = ({ children, slide, showDots = false }) => {
       items: 1,
     },
     mobile: {
-      breakpoint: { max: 375, min: 0 },
+      breakpoint: { max: 375, min: 1 },
       items: 1,
     },
   };

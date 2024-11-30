@@ -1,3 +1,23 @@
+@keyframes shift {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes shiftBack {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
 .wrapper {
   position: absolute;
   left: 0;
@@ -6,16 +26,22 @@
   bottom: 0;
   height: 100vh;
   background-color: transparent;
+  overflow: hidden;
 
   .modal {
+    padding: 132px 32px 32px 32px;
     position: absolute;
-    z-index: 998;
-    pointer-events: none;
     width: 232px;
-    left: 0;
     top: 0;
     bottom: 0;
     background-color: var(--modal-bg-c);
+  }
+
+  .modalIsOpen {
+    animation: shift 300ms ease-in-out;
+  }
+  .modalIsClosed {
+    animation: shiftBack 500ms ease-in-out;
   }
 
   .btn {
@@ -27,6 +53,11 @@
     height: 40px;
     border: none;
     background-color: transparent;
+    transition: scale 250ms ease-in-out;
+
+    &:hover {
+      scale: 1.25;
+    }
 
     .icon {
       stroke: var(--light-c);

@@ -5,7 +5,7 @@ import css from "./Gallery.module.css";
 
 const Gallery = () => {
   return (
-    <section className={css.section}>
+    <section className={css.section} id="gallery">
       <h2 className={css.title}>Gallery</h2>
       <CarouselSliders slide={7} showDots={true}>
         <GalleryItem

@@ -9,7 +9,7 @@ import { secondReview } from "../../helpers/reviews";
 
 const Reviews = () => {
   return (
-    <section className={css.section}>
+    <section className={css.section} id="reviews">
       <h2 className={css.title}>Reviews</h2>
       <ul className={css.list}>
         <ReviewTemplate

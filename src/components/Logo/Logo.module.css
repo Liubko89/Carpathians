@@ -4,4 +4,9 @@
   top: 20px;
   z-index: 999;
   fill: var(--light-c);
+  transition: scale 250ms ease-in-out;
+
+  &:hover {
+    scale: 1.25;
+  }
 }

@@ -3,6 +3,7 @@ import icon from "../../assets/icons.svg";
 import css from "./Header.module.css";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
 import { useState } from "react";
+import Navigation from "../Navigation/Navigation";
 
 const Header = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -20,7 +21,9 @@ const Header = () => {
         </button>
       )}
       {modalIsOpen && (
-        <ModalWrapper closeModal={closeModal} modalIsOpen={modalIsOpen} />
+        <ModalWrapper closeModal={closeModal} modalIsOpen={modalIsOpen}>
+          <Navigation />
+        </ModalWrapper>
       )}
     </header>
   );

@@ -1,30 +1,62 @@
 import css from "./ModalWrapper.module.css";
 import icons from "../../assets/icons.svg";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import clsx from "clsx";
 
-const ModalWrapper = ({ closeModal, modalIsOpen }) => {
+const ModalWrapper = ({ closeModal, modalIsOpen, children }) => {
+  const modalWrapperRef = useRef(null);
   const modalRef = useRef(null);
+  const [isClosed, setIsClosed] = useState(false);
 
-  useEffect(() => {
-    if (modalIsOpen) {
-      modalRef.current.focus();
-    }
-  }, [modalIsOpen]);
+  const handleCloseModal = () => {
+    setIsClosed(true);
+    setTimeout(() => {
+      closeModal();
+    }, 300);
+  };
 
   const handleEscape = (e) => {
     if (e.keyCode === 27) {
-      closeModal();
+      handleCloseModal();
     }
   };
+
+  useEffect(() => {
+    if (modalIsOpen) {
+      modalWrapperRef.current.focus();
+    }
+  }, [modalIsOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        handleCloseModal();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [modalRef]);
+
   return (
     <div
-      ref={modalRef}
+      ref={modalWrapperRef}
       className={css.wrapper}
       tabIndex="0"
       onKeyDown={handleEscape}
     >
-      <div className={css.modal}></div>
-      <button className={css.btn} onClick={closeModal}>
+      <div
+        className={clsx(
+          css.modal,
+          !isClosed ? css.modalIsOpen : css.modalIsClosed
+        )}
+        ref={modalRef}
+      >
+        {children}
+      </div>
+      <button className={css.btn} onClick={handleCloseModal}>
         <svg className={css.icon} width="40" height="40">
           <use href={`${icons}#icon-close`}></use>
         </svg>

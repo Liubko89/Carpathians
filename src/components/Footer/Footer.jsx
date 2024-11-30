@@ -4,7 +4,7 @@ import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
 
 const Footer = () => {
   return (
-    <footer className={css.footer}>
+    <footer className={css.footer} id="contacts">
       <h2 className={css.title}>Contacts</h2>
 
       <ul className={css.contactsList}>
