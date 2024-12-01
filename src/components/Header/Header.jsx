@@ -4,6 +4,7 @@ import css from "./Header.module.css";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
 import { useState } from "react";
 import Navigation from "../Navigation/Navigation";
+import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
 
 const Header = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -22,7 +23,8 @@ const Header = () => {
       )}
       {modalIsOpen && (
         <ModalWrapper closeModal={closeModal} modalIsOpen={modalIsOpen}>
-          <Navigation />
+          <Navigation closeModal={closeModal} />
+          <SocialMediaLinks verticalDirection />
         </ModalWrapper>
       )}
     </header>

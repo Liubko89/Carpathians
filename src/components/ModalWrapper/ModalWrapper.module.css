@@ -37,6 +37,12 @@
     background-color: var(--modal-bg-c);
   }
 
+  @media screen and (max-height: 666.98px) {
+    .modal {
+      padding-top: 86px;
+    }
+  }
+
   .modalIsOpen {
     animation: shift 300ms ease-in-out;
   }

@@ -1,6 +1,6 @@
 import css from "./ModalWrapper.module.css";
 import icons from "../../assets/icons.svg";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 
 const ModalWrapper = ({ closeModal, modalIsOpen, children }) => {
@@ -8,12 +8,12 @@ const ModalWrapper = ({ closeModal, modalIsOpen, children }) => {
   const modalRef = useRef(null);
   const [isClosed, setIsClosed] = useState(false);
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setIsClosed(true);
     setTimeout(() => {
       closeModal();
     }, 300);
-  };
+  }, [closeModal]);
 
   const handleEscape = (e) => {
     if (e.keyCode === 27) {
@@ -38,7 +38,7 @@ const ModalWrapper = ({ closeModal, modalIsOpen, children }) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [modalRef]);
+  }, [modalRef, handleCloseModal]);
 
   return (
     <div
