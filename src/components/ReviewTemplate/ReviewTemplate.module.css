@@ -11,6 +11,7 @@
   border: 2px solid var(--main-c);
   overflow: hidden;
   pointer-events: visible;
+  min-height: 452px;
 }
 
 .content {
