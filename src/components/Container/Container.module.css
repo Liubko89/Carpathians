@@ -12,6 +12,7 @@
 }
 
 .heroWrapper {
+  position: relative;
   padding: 188px 30px 193px;
   width: 100%;
   max-width: 375px;

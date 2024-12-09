@@ -11,7 +11,7 @@ import Container from "./components/Container/Container";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <main>
         <Container heroWrapper>
@@ -31,7 +31,7 @@ function App() {
       <Container footerWrapper>
         <Footer />
       </Container>
-    </div>
+    </>
   );
 }
 
