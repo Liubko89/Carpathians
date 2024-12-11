@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ModalBookTour from "../ModalBookTour/ModalBookTour";
 import css from "./Hero.module.css";
+import BookATour from "../BookATour/BookATour";
+import clsx from "clsx";
 
 const Hero = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -22,7 +24,11 @@ const Hero = () => {
         Journeys to the very heart of the Carpathians for those who want a real
         reboot
       </p>
-      <button className={css.btn} type="button" onClick={openModal}>
+      <button
+        className={clsx("btn", css.btn)}
+        type="button"
+        onClick={openModal}
+      >
         Book a tour
       </button>
 
@@ -31,7 +37,9 @@ const Hero = () => {
           closeModal={closeModal}
           modalIsOpen={modalIsOpen}
           bookATourSection={bookATourSection}
-        ></ModalBookTour>
+        >
+          <BookATour closeModal={closeModal} />
+        </ModalBookTour>
       )}
     </section>
   );

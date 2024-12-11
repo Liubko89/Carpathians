@@ -6,3 +6,21 @@
 .react-multi-carousel-list {
   margin-bottom: 24px;
 }
+
+.btn {
+  display: block;
+  width: 100%;
+  height: 52px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--light-c);
+  text-transform: uppercase;
+  background-color: var(--main-c);
+  border: none;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-text-c);
+}

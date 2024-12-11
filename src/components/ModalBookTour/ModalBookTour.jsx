@@ -62,7 +62,7 @@ const ModalBookTour = ({
         {children}
       </div>
       <button
-        className={bookATourSection ? css.hiden : css.btn}
+        className={clsx(css.closeBtn, bookATourSection && css.closeBtnDark)}
         onClick={handleCloseModal}
       >
         <svg className={css.icon} width="40" height="40">
