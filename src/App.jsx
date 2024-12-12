@@ -8,14 +8,28 @@ import Questions from "./components/Questions/Questions";
 import Reviews from "./components/Reviews/Reviews";
 import UpcomingTours from "./components/UpcomingTours/UpcomingTours";
 import Container from "./components/Container/Container";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [preventScrolling, setPreventScrolling] = useState(false);
+  const blockScrolling = () => setPreventScrolling(true);
+  const allowScrolling = () => setPreventScrolling(false);
+
+  useEffect(() => {
+    preventScrolling
+      ? document.body.classList.add("preventScrolling")
+      : document.body.classList.remove("preventScrolling");
+  }, [preventScrolling]);
+
   return (
     <>
-      <Header />
+      <Header blockScrolling={blockScrolling} allowScrolling={allowScrolling} />
       <main>
         <Container heroWrapper>
-          <Hero />
+          <Hero
+            blockScrolling={blockScrolling}
+            allowScrolling={allowScrolling}
+          />
         </Container>
         <Container>
           <AboutUs />

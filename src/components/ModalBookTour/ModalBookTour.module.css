@@ -1,23 +1,3 @@
-@keyframes shift {
-  0% {
-    left: -100%;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
-@keyframes shiftBack {
-  0% {
-    left: 0;
-  }
-
-  100% {
-    left: -100%;
-  }
-}
-
 .hiden {
   display: none;
 }
@@ -35,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 350ms ease-in-out;
 
   .modal {
     position: absolute;
@@ -42,37 +23,14 @@
     height: max-content;
     background-color: white;
   }
+}
 
-  .modalIsOpen {
-    animation: shift 300ms ease-in-out;
-  }
-  .modalIsClosed {
-    animation: shiftBack 700ms ease-in-out;
-  }
-
-  .closeBtn {
-    cursor: pointer;
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    transition: scale 250ms ease-in-out;
-
-    &:hover {
-      scale: 1.25;
-    }
-
-    .icon {
-      stroke: var(--light-c);
-      pointer-events: none;
-    }
-  }
-  .closeBtnDark {
-    .icon {
-      stroke: var(--primary-text-c);
-    }
-  }
+.showModal {
+  opacity: 1;
+  scale: 1;
+}
+.hideModal {
+  opacity: 0;
+  scale: 0;
+  pointer-events: none;
 }

@@ -4,17 +4,16 @@ import css from "./Hero.module.css";
 import BookATour from "../BookATour/BookATour";
 import clsx from "clsx";
 
-const Hero = () => {
+const Hero = ({ blockScrolling, allowScrolling }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [bookATourSection, setBookATourSection] = useState(false);
 
   const openModal = () => {
     setModalIsOpen(true);
-    setBookATourSection(true);
+    blockScrolling();
   };
   const closeModal = () => {
     setModalIsOpen(false);
-    setBookATourSection(false);
+    allowScrolling();
   };
 
   return (
@@ -32,15 +31,9 @@ const Hero = () => {
         Book a tour
       </button>
 
-      {modalIsOpen && (
-        <ModalBookTour
-          closeModal={closeModal}
-          modalIsOpen={modalIsOpen}
-          bookATourSection={bookATourSection}
-        >
-          <BookATour closeModal={closeModal} />
-        </ModalBookTour>
-      )}
+      <ModalBookTour closeModal={closeModal} modalIsOpen={modalIsOpen}>
+        <BookATour closeModal={closeModal} />
+      </ModalBookTour>
     </section>
   );
 };

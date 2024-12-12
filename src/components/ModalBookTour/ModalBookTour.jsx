@@ -1,28 +1,15 @@
 import css from "./ModalBookTour.module.css";
-import icons from "../../assets/icons.svg";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import clsx from "clsx";
+import BookATour from "../BookATour/BookATour";
 
-const ModalBookTour = ({
-  closeModal,
-  modalIsOpen,
-  bookATourSection,
-  children,
-}) => {
+const ModalBookTour = ({ closeModal, modalIsOpen }) => {
   const modalWrapperRef = useRef(null);
   const modalRef = useRef(null);
-  const [isClosed, setIsClosed] = useState(false);
-
-  const handleCloseModal = useCallback(() => {
-    setIsClosed(true);
-    setTimeout(() => {
-      closeModal();
-    }, 600);
-  }, [closeModal]);
 
   const handleEscape = (e) => {
     if (e.keyCode === 27) {
-      handleCloseModal();
+      closeModal();
     }
   };
 
@@ -35,7 +22,7 @@ const ModalBookTour = ({
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
-        handleCloseModal();
+        closeModal();
       }
     };
 
@@ -43,32 +30,18 @@ const ModalBookTour = ({
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [modalRef, handleCloseModal]);
+  }, [modalRef, closeModal]);
 
   return (
     <div
       ref={modalWrapperRef}
-      className={css.wrapper}
+      className={clsx(css.wrapper, modalIsOpen ? css.showModal : css.hideModal)}
       tabIndex="0"
       onKeyDown={handleEscape}
     >
-      <div
-        className={clsx(
-          css.modal,
-          !isClosed ? css.modalIsOpen : css.modalIsClosed
-        )}
-        ref={modalRef}
-      >
-        {children}
+      <div className={css.modal} ref={modalRef}>
+        <BookATour closeModal={closeModal} />
       </div>
-      <button
-        className={clsx(css.closeBtn, bookATourSection && css.closeBtnDark)}
-        onClick={handleCloseModal}
-      >
-        <svg className={css.icon} width="40" height="40">
-          <use href={`${icons}#icon-close`}></use>
-        </svg>
-      </button>
     </div>
   );
 };

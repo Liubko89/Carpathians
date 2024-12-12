@@ -11,6 +11,10 @@
     position: relative;
     overflow: hidden;
 
+    &:focus {
+      outline: none;
+    }
+
     &::after {
       content: "";
       display: block;
@@ -23,7 +27,8 @@
       transition: transform 300ms ease-in-out;
     }
 
-    &:hover::after {
+    &:hover::after,
+    &:focus::after {
       transform: translateX(100%);
     }
   }

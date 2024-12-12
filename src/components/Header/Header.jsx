@@ -6,10 +6,16 @@ import { useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
 
-const Header = () => {
+const Header = ({ blockScrolling, allowScrolling }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const openModal = () => setModalIsOpen(true);
-  const closeModal = () => setModalIsOpen(false);
+  const openModal = () => {
+    setModalIsOpen(true);
+    blockScrolling();
+  };
+  const closeModal = () => {
+    setModalIsOpen(false);
+    allowScrolling();
+  };
 
   return (
     <header className={css.header}>

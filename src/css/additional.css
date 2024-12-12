@@ -24,3 +24,28 @@
 .btn:hover {
   background-color: var(--primary-text-c);
 }
+
+.closeBtn {
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  transition: scale 250ms ease-in-out;
+
+  &:hover {
+    scale: 1.25;
+  }
+
+  .iconDark {
+    stroke: var(--primary-text-c);
+    pointer-events: none;
+  }
+  .iconLight {
+    stroke: var(--light-c);
+    pointer-events: none;
+  }
+}

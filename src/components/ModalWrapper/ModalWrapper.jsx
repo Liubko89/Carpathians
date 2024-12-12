@@ -9,10 +9,10 @@ const ModalWrapper = ({ closeModal, modalIsOpen, children }) => {
   const [isClosed, setIsClosed] = useState(false);
 
   const handleCloseModal = useCallback(() => {
-    setIsClosed(true);
     setTimeout(() => {
       closeModal();
     }, 300);
+    setIsClosed(true);
   }, [closeModal]);
 
   const handleEscape = (e) => {
