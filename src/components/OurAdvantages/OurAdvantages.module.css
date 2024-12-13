@@ -17,3 +17,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media screen and (min-resolution: 192dpi) {
+  .list {
+    background-image: url(../../assets/img/mob2x/Advantages_2x.jpg);
+  }
+}

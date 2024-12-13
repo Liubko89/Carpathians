@@ -22,3 +22,8 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (min-resolution: 192dpi) {
+  .heroWrapper {
+    background-image: url(../../assets/img/mob2x/hero_desk_1920_2x.jpg);
+  }
+}

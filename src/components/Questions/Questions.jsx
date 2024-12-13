@@ -55,14 +55,9 @@ const Questions = () => {
                 as="textarea"
                 placeholder="What would you like to know?"
               />
-              <ErrorMessage
-                className={css.error}
-                name="question"
-                component="span"
-              />
             </div>
             <button className={css.btn} type="submit">
-              Send
+              Call me
             </button>
           </Form>
         </Formik>
