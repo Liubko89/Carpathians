@@ -1,29 +1,38 @@
-.container {
-  max-width: 375px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 30px;
-}
-
+.heroWrapper,
+.container,
 .footerWrapper {
   max-width: 375px;
   width: 100%;
   margin: 0 auto;
 }
 
+.container {
+  padding: 30px;
+}
+
 .heroWrapper {
   position: relative;
   padding: 188px 30px 193px;
-  width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
   background-color: var(--spare-bg);
   background-image: url(../../assets/img/mob1x/hero_desk_1920-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
 }
+
 @media screen and (min-resolution: 192dpi) {
   .heroWrapper {
     background-image: url(../../assets/img/mob2x/hero_desk_1920_2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container,
+  .heroWrapper,
+  .footerWrapper {
+    max-width: 768px;
+  }
+
+  .heroWrapper {
+    padding: 180px 20px 185px;
   }
 }

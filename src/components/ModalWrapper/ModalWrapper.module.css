@@ -37,12 +37,6 @@
     background-color: var(--modal-bg-c);
   }
 
-  @media screen and (max-height: 666.98px) {
-    .modal {
-      padding-top: 86px;
-    }
-  }
-
   .modalIsOpen {
     animation: shift 300ms ease-in-out;
   }
@@ -68,6 +62,24 @@
     .icon {
       stroke: var(--light-c);
       pointer-events: none;
+    }
+  }
+
+  @media screen and (max-height: 666.98px) {
+    .modal {
+      padding-top: 86px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .modal {
+      width: 374px;
+      padding: 184px 82px 82px;
+    }
+
+    .btn {
+      top: 34px;
+      right: 20px;
     }
   }
 }

@@ -15,6 +15,7 @@ const ModalBookTour = ({ closeModal, modalIsOpen }) => {
 
   useEffect(() => {
     if (modalIsOpen) {
+      window.scrollTo({ top: 0 });
       modalWrapperRef.current.focus();
     }
   }, [modalIsOpen]);

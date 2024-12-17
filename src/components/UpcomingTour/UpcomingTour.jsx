@@ -1,6 +1,6 @@
 import css from "./UpcomingTour.module.css";
 
-const UpcomingTour = ({ img1x, img2x, alt, tourName, price, id }) => {
+const UpcomingTour = ({ img1x, img2x, alt, tourName, price }) => {
   return (
     <div className={css.itemWrapper}>
       <picture>
@@ -11,7 +11,9 @@ const UpcomingTour = ({ img1x, img2x, alt, tourName, price, id }) => {
       <div className={css.descrWrapper}>
         <h3 className={css.subTitle}>{tourName}</h3>
         <p className={css.descr}>From UAH {price}/person</p>
-        <button className={css.btn}>Book the tour</button>
+        <button className={css.btn} type="button">
+          More Details
+        </button>
       </div>
     </div>
   );

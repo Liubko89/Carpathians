@@ -106,14 +106,13 @@ const BookATour = ({ closeModal }) => {
           <button className="btn" type="submit">
             Call Me
           </button>
-
-          <button className="closeBtn" onClick={closeModal} type="button">
-            <svg className="iconDark" width="40" height="40">
-              <use href={`${icons}#icon-close`}></use>
-            </svg>
-          </button>
         </Form>
       </Formik>
+      <button className="closeBtn" onClick={closeModal} type="button">
+        <svg className="iconDark" width="40" height="40">
+          <use href={`${icons}#icon-close`}></use>
+        </svg>
+      </button>
     </div>
   );
 };
