@@ -32,7 +32,12 @@
     max-width: 768px;
   }
 
+  .container {
+    padding: 0 20px;
+  }
+
   .heroWrapper {
     padding: 180px 20px 185px;
+    margin-bottom: 80px;
   }
 }

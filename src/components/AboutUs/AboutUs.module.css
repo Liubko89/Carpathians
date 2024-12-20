@@ -1,18 +1,29 @@
 .aboutUsSection {
   margin-bottom: 52px;
-}
 
-.title {
-  text-align: center;
-  font-weight: 400;
-  margin-bottom: 28px;
-  font-size: 32px;
-}
+  .title {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 28px;
+    font-size: 32px;
+  }
 
-p {
-  color: var(--secondary-text-c);
-}
+  p {
+    color: var(--secondary-text-c);
+  }
 
-.firstParagraph {
-  margin-bottom: 8px;
+  .firstParagraph {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .title {
+      font-size: 52px;
+    }
+
+    .firstParagraph,
+    .secondParagraph {
+      font-size: 20px;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 .itemWrapper {
-  border: 2px solid var(--main-c);
+  border: 1px solid var(--main-c);
+  margin: 0 auto;
 
   .img {
     width: 100%;
@@ -29,5 +30,11 @@
       border: none;
       text-transform: uppercase;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .itemWrapper {
+    max-width: 354px;
   }
 }

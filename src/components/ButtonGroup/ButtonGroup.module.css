@@ -1,65 +1,58 @@
 .btnGroup {
   position: relative;
-}
 
-.prevBtn {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-}
+  .btn {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.nextBtn {
-  position: absolute;
-  top: 50%;
-  right: 25%;
-}
+    &:hover {
+      border: 2px solid transparent;
+      background: linear-gradient(var(--light-c), var(--light-c)) padding-box,
+        linear-gradient(
+            45deg,
+            var(--main-c),
+            var(--secondary-text-c),
+            var(--light-c),
+            var(--main-c),
+            var(--secondary-text-c),
+            var(--light-c)
+          )
+          border-box;
+    }
 
-.prevBtn,
-.nextBtn {
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: 300ms ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .icon {
+      pointer-events: none;
+      fill: var(--main-c);
+      transition: scale 250ms ease-in-out;
+    }
 
-.prevBtn:active {
-  rotate: -360deg;
-}
+    &:hover,
+    &:active > .icon {
+      scale: 1.1;
+    }
+  }
 
-.nextBtn:active {
-  rotate: 360deg;
-}
+  .prevBtn {
+    left: 25%;
+  }
 
-.prevBtn:hover,
-.nextBtn:hover {
-  border: 2px solid transparent;
-  background: linear-gradient(var(--light-c), var(--light-c)) padding-box,
-    linear-gradient(
-        45deg,
-        var(--main-c),
-        var(--secondary-text-c),
-        var(--light-c),
-        var(--main-c),
-        var(--secondary-text-c),
-        var(--light-c)
-      )
-      border-box;
-}
+  .nextBtn {
+    right: 25%;
+  }
 
-.prevIcon,
-.nextIcon {
-  pointer-events: none;
-  fill: var(--main-c);
-}
-
-.hidden {
-  opacity: 0.4;
-  cursor: not-allowed;
-  pointer-events: none;
+  .hidden {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }

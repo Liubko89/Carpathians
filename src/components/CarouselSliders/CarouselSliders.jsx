@@ -1,18 +1,19 @@
 import Carousel from "react-multi-carousel";
 import ButtonGroup from "../ButtonGroup/ButtonGroup";
 
-const CarouselSliders = ({ children, slide, showDots = false }) => {
+const CarouselSliders = ({ children, showDots = false }) => {
   const responsive = {
     desktop: {
-      breakpoint: { max: 1440, min: 768 },
+      breakpoint: { max: 6000, min: 1440 },
       items: 1,
     },
     tablet: {
-      breakpoint: { max: 768, min: 375 },
-      items: 1,
+      breakpoint: { max: 1439, min: 768 },
+      items: 2,
+      slidesToSlide: 2,
     },
     mobile: {
-      breakpoint: { max: 375, min: 1 },
+      breakpoint: { max: 767, min: 1 },
       items: 1,
     },
   };
@@ -21,7 +22,7 @@ const CarouselSliders = ({ children, slide, showDots = false }) => {
       responsive={responsive}
       arrows={false}
       renderButtonGroupOutside={true}
-      customButtonGroup={<ButtonGroup slide={slide} />}
+      customButtonGroup={<ButtonGroup />}
       showDots={showDots}
     >
       {children}

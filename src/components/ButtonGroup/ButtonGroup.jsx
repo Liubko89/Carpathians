@@ -1,25 +1,34 @@
+import clsx from "clsx";
 import icons from "../../assets/icons.svg";
 import css from "./ButtonGroup.module.css";
 
-const ButtonGroup = ({ next, previous, slide, ...rest }) => {
+const ButtonGroup = ({ next, previous, ...rest }) => {
   const {
     carouselState: { currentSlide },
   } = rest;
+
+  const viewportWidth = window.innerWidth;
+  const handleSlides = viewportWidth < 768 ? 2 : 1;
+
   return (
     <div className={css.btnGroup}>
       <button
-        className={`${css.prevBtn} ${currentSlide === 0 ? css.hidden : ""}`}
+        className={clsx(css.btn, css.prevBtn, !currentSlide && css.hidden)}
         onClick={() => previous()}
       >
-        <svg className={css.prevIcon} width="10" height="18">
+        <svg className={css.icon} width="10" height="18">
           <use href={`${icons}#icon-left`}></use>
         </svg>
       </button>
       <button
-        className={`${css.nextBtn} ${currentSlide === slide ? css.hidden : ""}`}
+        className={clsx(
+          css.btn,
+          css.nextBtn,
+          currentSlide === handleSlides && css.hidden
+        )}
         onClick={() => next()}
       >
-        <svg className={css.nextIcon} width="10" height="18">
+        <svg className={css.icon} width="10" height="18">
           <use href={`${icons}#icon-right`}></use>
         </svg>
       </button>

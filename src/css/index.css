@@ -12,6 +12,7 @@ body {
   font-style: normal;
   line-height: 1.22;
   color: var(--primary-text-c);
+  background-color: var(--light-c);
 }
 
 .preventScrolling {

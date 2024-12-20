@@ -1,21 +1,46 @@
-.listItem:not(:last-child) {
-  margin-bottom: 28px;
+.listItem {
+  &:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  .itemWrapper {
+    background-color: var(--main-c);
+    width: 100%;
+    padding: 10px 0 10px 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .icon {
+      fill: var(--light-c);
+    }
+
+    .descr {
+      color: var(--light-c);
+      font-size: 14px;
+    }
+  }
 }
 
-.itemWrapper {
-  background-color: var(--main-c);
-  width: 100%;
-  padding: 10px 0 10px 32px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+@media screen and (min-width: 768px) {
+  .listItem {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
 
-.icon {
-  fill: var(--light-c);
-}
+    .itemWrapper {
+      max-width: 604px;
+      margin: 0 auto;
+      padding: 12px 44px;
 
-.descr {
-  color: var(--light-c);
-  font-size: 14px;
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .descr {
+        font-size: 20px;
+      }
+    }
+  }
 }

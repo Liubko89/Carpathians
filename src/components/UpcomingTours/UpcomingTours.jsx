@@ -9,7 +9,7 @@ const UpcomingTours = () => {
   return (
     <section className={css.section} id="tours">
       <h2 className={css.title}>Upcoming tours</h2>
-      <CarouselSliders slide={2}>
+      <CarouselSliders>
         <UpcomingTour
           img1x={toursImg.hoverla}
           img2x={toursImg.hoverla_2x}
