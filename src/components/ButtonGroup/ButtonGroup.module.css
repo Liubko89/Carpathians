@@ -50,6 +50,16 @@
     right: 25%;
   }
 
+  @media screen and (min-width: 768px) {
+    .prevBtn {
+      left: 40%;
+    }
+
+    .nextBtn {
+      right: 40%;
+    }
+  }
+
   .hidden {
     opacity: 0.4;
     cursor: not-allowed;

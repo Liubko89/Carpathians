@@ -104,3 +104,29 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .listItem {
+    display: inline-block;
+    max-width: 354px;
+
+    &:first-child {
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+
+    .wrapper {
+      min-height: 504px;
+
+      .content {
+        .listTitle {
+          font-size: 24px;
+        }
+
+        .descr {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

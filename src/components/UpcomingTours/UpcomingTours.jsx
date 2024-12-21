@@ -6,10 +6,13 @@ import UpcomingTour from "../UpcomingTour/UpcomingTour";
 import { useId } from "react";
 
 const UpcomingTours = () => {
+  const viewportWidth = window.innerWidth;
+  const handleSlides = viewportWidth < 768 ? 2 : 1;
+
   return (
     <section className={css.section} id="tours">
       <h2 className={css.title}>Upcoming tours</h2>
-      <CarouselSliders>
+      <CarouselSliders handleSlides={handleSlides}>
         <UpcomingTour
           img1x={toursImg.hoverla}
           img2x={toursImg.hoverla_2x}

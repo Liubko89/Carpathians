@@ -4,7 +4,7 @@ import css from "./ReviewTemplate.module.css";
 import icons from "../../assets/icons.svg";
 import clsx from "clsx";
 
-const ReviewTemplate = ({ image, image_2x, photo, photo_2x, review }) => {
+const ReviewTemplate = ({ name, image, image_2x, photo, photo_2x, review }) => {
   const [overlay, setOverlay] = useState(false);
   return (
     <li className={css.listItem}>
@@ -16,7 +16,7 @@ const ReviewTemplate = ({ image, image_2x, photo, photo_2x, review }) => {
             <img className={css.img} src={image} alt="avatar of reviewer" />
           </picture>
 
-          <h3 className={css.listTitle}>Maria</h3>
+          <h3 className={css.listTitle}>{name}</h3>
           <p className={css.descr}>{review}</p>
         </div>
         <button className={css.btn} onClick={() => setOverlay(!overlay)}>

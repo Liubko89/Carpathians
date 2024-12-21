@@ -17,6 +17,7 @@ const Reviews = () => {
       <h2 className={css.title}>Reviews</h2>
       <ul className={css.list}>
         <ReviewTemplate
+          name="Maria"
           image={imgMaria}
           image_2x={imgMaria_2x}
           photo={photoMaria}
@@ -24,6 +25,7 @@ const Reviews = () => {
           review={firstReview}
         />
         <ReviewTemplate
+          name="Ostap"
           image={imgOstap}
           image_2x={imgOstap_2x}
           photo={photoOstap}

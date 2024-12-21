@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import ButtonGroup from "../ButtonGroup/ButtonGroup";
 
-const CarouselSliders = ({ children, showDots = false }) => {
+const CarouselSliders = ({ children, showDots = false, handleSlides }) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 6000, min: 1440 },
@@ -22,7 +22,7 @@ const CarouselSliders = ({ children, showDots = false }) => {
       responsive={responsive}
       arrows={false}
       renderButtonGroupOutside={true}
-      customButtonGroup={<ButtonGroup />}
+      customButtonGroup={<ButtonGroup handleSlides={handleSlides} />}
       showDots={showDots}
     >
       {children}

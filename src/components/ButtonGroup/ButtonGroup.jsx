@@ -2,13 +2,10 @@ import clsx from "clsx";
 import icons from "../../assets/icons.svg";
 import css from "./ButtonGroup.module.css";
 
-const ButtonGroup = ({ next, previous, ...rest }) => {
+const ButtonGroup = ({ next, previous, handleSlides, ...rest }) => {
   const {
     carouselState: { currentSlide },
   } = rest;
-
-  const viewportWidth = window.innerWidth;
-  const handleSlides = viewportWidth < 768 ? 2 : 1;
 
   return (
     <div className={css.btnGroup}>

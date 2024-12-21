@@ -14,6 +14,7 @@ const BookATour = ({ closeModal }) => {
   const handleSubmit = (values, actions) => {
     console.log(values);
     actions.resetForm();
+    closeModal();
   };
   return (
     <div className={css.wrapper}>
