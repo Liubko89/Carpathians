@@ -39,7 +39,7 @@ function App() {
           <Gallery />
         </Container>
         <Container footerWrapper>
-          <Questions />/
+          <Questions />
         </Container>
       </main>
       <Container footerWrapper>

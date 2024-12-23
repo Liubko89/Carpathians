@@ -1,15 +1,10 @@
 import css from "./SocialMediaLinks.module.css";
 import icons from "../../assets/icons.svg";
+import clsx from "clsx";
 
 const SocialMediaLinks = ({ verticalDirection = false }) => {
   return (
-    <ul
-      className={
-        verticalDirection
-          ? `${css.socialLinks} ${css.vertical}`
-          : css.socialLinks
-      }
-    >
+    <ul className={clsx(css.socialLinks, verticalDirection && css.vertical)}>
       <li>
         <a className={css.socialLink} href="/">
           <svg className={css.socialLinkIcon} width="33" height="33">

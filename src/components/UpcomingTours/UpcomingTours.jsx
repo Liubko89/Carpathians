@@ -6,7 +6,7 @@ import UpcomingTour from "../UpcomingTour/UpcomingTour";
 import { useId } from "react";
 
 const UpcomingTours = () => {
-  const viewportWidth = window.innerWidth;
+  const viewportWidth = 768;
   const handleSlides = viewportWidth < 768 ? 2 : 1;
 
   return (

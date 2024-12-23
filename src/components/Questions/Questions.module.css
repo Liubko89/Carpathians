@@ -109,3 +109,47 @@
     background-image: url(../../assets/img/mob2x/image_3_desk_2x.jpg);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 88px 145px;
+
+    .wrapper {
+      padding: 40px 42px;
+
+      .title {
+        padding: 0 72px;
+        font-size: 32px;
+        margin-bottom: 24px;
+      }
+
+      .descr {
+        font-size: 18px;
+      }
+
+      form {
+        .inputWrapper {
+          padding: 0 20px 20px;
+
+          .input {
+            font-size: 20px;
+          }
+
+          .error {
+            padding-left: 20px;
+            font-size: 16px;
+          }
+        }
+
+        .textareaWrapper {
+          padding: 0 20px 0;
+          margin-bottom: 32px;
+
+          .textarea {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

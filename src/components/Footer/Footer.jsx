@@ -1,6 +1,7 @@
 import css from "./Footer.module.css";
 import icons from "../../assets/icons.svg";
 import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
+import clsx from "clsx";
 
 const Footer = () => {
   return (
@@ -30,7 +31,11 @@ const Footer = () => {
         </li>
         <li className={css.contact}>
           <a className={css.addressLink} href="mailto:mandrykarpaty@gmail.com">
-            <svg className={css.icon} width="27" height="21">
+            <svg
+              className={clsx(css.icon, css.mailIcon)}
+              width="27"
+              height="21"
+            >
               <use href={`${icons}#icon-email`}></use>
             </svg>
             <p className={css.linkDescr}>mandrykarpaty@gmail.com</p>
