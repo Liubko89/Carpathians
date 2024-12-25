@@ -11,6 +11,8 @@ import Container from "./components/Container/Container";
 import { useEffect, useState } from "react";
 
 function App() {
+  const viewportWidth = window.innerWidth;
+
   const [preventScrolling, setPreventScrolling] = useState(false);
   const blockScrolling = () => setPreventScrolling(true);
   const allowScrolling = () => setPreventScrolling(false);
@@ -25,26 +27,26 @@ function App() {
     <>
       <Header blockScrolling={blockScrolling} allowScrolling={allowScrolling} />
       <main>
-        <Container heroWrapper>
+        {/* <Container heroWrapper>
           <Hero
             blockScrolling={blockScrolling}
             allowScrolling={allowScrolling}
           />
-        </Container>
+        </Container> */}
         <Container>
-          <AboutUs />
-          <OurAdvantages />
-          <UpcomingTours />
-          <Reviews />
-          <Gallery />
+          {/* <AboutUs /> */}
+          {/* <OurAdvantages /> */}
+          {/* <UpcomingTours viewportWidth={viewportWidth} /> */}
+          {/* <Reviews /> */}
+          <Gallery viewportWidth={viewportWidth} />
         </Container>
-        <Container footerWrapper>
-          <Questions />
-        </Container>
+        {/* <Container footerWrapper> */}
+        {/* <Questions />/ */}
+        {/* </Container> */}
       </main>
-      <Container footerWrapper>
-        <Footer />
-      </Container>
+      {/* <Container footerWrapper> */}
+      {/* <Footer /> */}
+      {/* </Container> */}
     </>
   );
 }

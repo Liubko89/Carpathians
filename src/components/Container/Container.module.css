@@ -39,5 +39,12 @@
   .heroWrapper {
     padding: 180px 20px 185px;
     margin-bottom: 80px;
+    background-image: url(../../assets/img/tab1x/hero_tab.jpg);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .heroWrapper {
+      background-image: url(../../assets/img/tab2x/hero_tab_2x.jpg);
+    }
   }
 }

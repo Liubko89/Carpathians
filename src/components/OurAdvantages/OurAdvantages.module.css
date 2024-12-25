@@ -34,11 +34,18 @@
     }
 
     .list {
-      background-image: url(../../assets/img/tab1x/Advantages_2.jpg),
-        url(../../assets/img/tab2x/Advantages_3.jpg);
+      background-image: url(../../assets/img/tab1x/Advantages_2_tab.jpg),
+        url(../../assets/img/tab1x/Advantages_3_tab.jpg);
       background-position: top left, bottom right;
       background-size: 354px, 354px;
       background-color: var(--light-c);
+    }
+
+    @media screen and (min-resolution: 192dpi) {
+      .list {
+        background-image: url(../../assets/img/tab2x/Advantages_2_tab_2x.jpg),
+          url(../../assets/img/tab2x/Advantages_3_tab_2x.jpg);
+      }
     }
   }
 }

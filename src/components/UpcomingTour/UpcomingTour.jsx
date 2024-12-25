@@ -1,10 +1,25 @@
 import css from "./UpcomingTour.module.css";
 
-const UpcomingTour = ({ img1x, img2x, alt, tourName, price }) => {
+const UpcomingTour = ({
+  img1x,
+  img2x,
+  imgTab1x,
+  imgTab2x,
+  alt,
+  tourName,
+  price,
+}) => {
   return (
     <div className={css.itemWrapper}>
       <picture>
-        <source media="(min-resolution: 192dpi)" srcSet={img2x} />
+        <source
+          media="(min-width: 768px)"
+          srcSet={`${imgTab1x} 1x, ${imgTab2x} 2x`}
+        />
+        <source
+          media="(max-width: 767.98px)"
+          srcSet={`${img1x} 1x, ${img2x} 2x`}
+        />
         <img className={css.img} src={img1x} alt={alt} />
       </picture>
 

@@ -15,6 +15,23 @@ import mob_7_2x from "../assets/img/mob2x/photoGallery-6_2x.jpg";
 import mob_8_1x from "../assets/img/mob1x/photoGallery-7.jpg";
 import mob_8_2x from "../assets/img/mob2x/photoGallery-7_2x.jpg";
 
+import tab_1_1x from "../assets/img/tab1x/Photo_gallery_tab.jpg";
+import tab_1_2x from "../assets/img/tab2x/Photo_gallery_tab_2x.jpg";
+import tab_2_1x from "../assets/img/tab1x/Photo_gallery-1_tab.jpg";
+import tab_2_2x from "../assets/img/tab2x/Photo_gallery_tab-1_2x.jpg";
+import tab_3_1x from "../assets/img/tab1x/Photo_gallery-2_tab.jpg";
+import tab_3_2x from "../assets/img/tab2x/Photo_gallery_tab-2_2x.jpg";
+import tab_4_1x from "../assets/img/tab1x/Photo_gallery-3_tab.jpg";
+import tab_4_2x from "../assets/img/tab2x/Photo_gallery-3_tab_2x.jpg";
+import tab_5_1x from "../assets/img/tab1x/Photo_gallery-4_tab.jpg";
+import tab_5_2x from "../assets/img/tab2x/Photo_gallery-4_tab_2x.jpg";
+import tab_6_1x from "../assets/img/tab1x/Photo_gallery-5_tab.jpg";
+import tab_6_2x from "../assets/img/tab2x/Photo_gallery-5_tab_2x.jpg";
+import tab_7_1x from "../assets/img/tab1x/Photo_gallery-6_tab.jpg";
+import tab_7_2x from "../assets/img/tab2x/Photo_gallery-6_tab_2x.jpg";
+import tab_8_1x from "../assets/img/tab1x/Photo_gallery-7_tab.jpg";
+import tab_8_2x from "../assets/img/tab2x/Photo_gallery-7_tab_2x.jpg";
+
 const galleryImage = {
   mob_1_1x,
   mob_1_2x,
@@ -32,6 +49,22 @@ const galleryImage = {
   mob_7_2x,
   mob_8_1x,
   mob_8_2x,
+  tab_1_1x,
+  tab_1_2x,
+  tab_2_1x,
+  tab_2_2x,
+  tab_3_1x,
+  tab_3_2x,
+  tab_4_1x,
+  tab_4_2x,
+  tab_5_1x,
+  tab_5_2x,
+  tab_6_1x,
+  tab_6_2x,
+  tab_7_1x,
+  tab_7_2x,
+  tab_8_1x,
+  tab_8_2x,
 };
 
 export default galleryImage;
