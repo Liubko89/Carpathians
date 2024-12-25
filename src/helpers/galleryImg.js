@@ -32,39 +32,15 @@ import tab_7_2x from "../assets/img/tab2x/Photo_gallery-6_tab_2x.jpg";
 import tab_8_1x from "../assets/img/tab1x/Photo_gallery-7_tab.jpg";
 import tab_8_2x from "../assets/img/tab2x/Photo_gallery-7_tab_2x.jpg";
 
-const galleryImage = {
-  mob_1_1x,
-  mob_1_2x,
-  mob_2_1x,
-  mob_2_2x,
-  mob_3_1x,
-  mob_3_2x,
-  mob_4_1x,
-  mob_4_2x,
-  mob_5_1x,
-  mob_5_2x,
-  mob_6_1x,
-  mob_6_2x,
-  mob_7_1x,
-  mob_7_2x,
-  mob_8_1x,
-  mob_8_2x,
-  tab_1_1x,
-  tab_1_2x,
-  tab_2_1x,
-  tab_2_2x,
-  tab_3_1x,
-  tab_3_2x,
-  tab_4_1x,
-  tab_4_2x,
-  tab_5_1x,
-  tab_5_2x,
-  tab_6_1x,
-  tab_6_2x,
-  tab_7_1x,
-  tab_7_2x,
-  tab_8_1x,
-  tab_8_2x,
-};
+const galleryImage = [
+  { mob_1x: mob_1_1x, mob_2x: mob_1_2x, tab_1x: tab_1_1x, tab_2x: tab_1_2x },
+  { mob_1x: mob_2_1x, mob_2x: mob_2_2x, tab_1x: tab_2_1x, tab_2x: tab_2_2x },
+  { mob_1x: mob_3_1x, mob_2x: mob_3_2x, tab_1x: tab_3_1x, tab_2x: tab_3_2x },
+  { mob_1x: mob_4_1x, mob_2x: mob_4_2x, tab_1x: tab_4_1x, tab_2x: tab_4_2x },
+  { mob_1x: mob_5_1x, mob_2x: mob_5_2x, tab_1x: tab_5_1x, tab_2x: tab_5_2x },
+  { mob_1x: mob_6_1x, mob_2x: mob_6_2x, tab_1x: tab_6_1x, tab_2x: tab_6_2x },
+  { mob_1x: mob_7_1x, mob_2x: mob_7_2x, tab_1x: tab_7_1x, tab_2x: tab_7_2x },
+  { mob_1x: mob_8_1x, mob_2x: mob_8_2x, tab_1x: tab_8_1x, tab_2x: tab_8_2x },
+];
 
 export default galleryImage;
