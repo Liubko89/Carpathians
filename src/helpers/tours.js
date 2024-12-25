@@ -10,20 +10,38 @@ import carpathians from "../assets/img/mob1x/overlay-2-min.jpg";
 import carpathians_2x from "../assets/img/mob2x/overlay-2_2x.jpg";
 import carpathiansTab from "../assets/img/tab1x/overlay-2_tab.jpg";
 import carpathiansTab_2x from "../assets/img/tab2x/overlay-2_tab_2x.jpg";
+import { nanoid } from "nanoid";
 
-const toursImg = {
-  hoverla,
-  hoverla_2x,
-  bukovel,
-  bukovel_2x,
-  carpathians,
-  carpathians_2x,
-  hoverlaTab,
-  hoverlaTab_2x,
-  bukovelTab,
-  bukovelTab_2x,
-  carpathiansTab,
-  carpathiansTab_2x,
-};
-
-export default toursImg;
+const tours = [
+  {
+    id: nanoid(),
+    name: "Ascent to Hoverla",
+    alt: "image of Hoverla",
+    price: 4.999,
+    mobImage: hoverla,
+    mobImage2x: hoverla_2x,
+    tabImage: hoverlaTab,
+    tabImage2x: hoverlaTab_2x,
+  },
+  {
+    id: nanoid(),
+    name: "Ski tour to Bukovel",
+    alt: "image of Bukovel",
+    price: 7.499,
+    mobImage: bukovel,
+    mobImage2x: bukovel_2x,
+    tabImage: bukovelTab,
+    tabImage2x: bukovelTab_2x,
+  },
+  {
+    id: nanoid(),
+    name: "Week in Carpathians",
+    alt: "image of Carpathians",
+    price: 9.499,
+    mobImage: carpathians,
+    mobImage2x: carpathians_2x,
+    tabImage: carpathiansTab,
+    tabImage2x: carpathiansTab_2x,
+  },
+];
+export default tours;

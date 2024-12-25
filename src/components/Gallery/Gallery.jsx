@@ -1,8 +1,8 @@
-import { useId } from "react";
 import galleryImage from "../../helpers/galleryImg.js";
 import CarouselSliders from "../CarouselSliders/CarouselSliders";
 import GalleryItem from "../GalleryItem/GalleryItem.jsx";
 import css from "./Gallery.module.css";
+import { nanoid } from "nanoid";
 
 const Gallery = ({ viewportWidth }) => {
   const handleSlides = viewportWidth >= 768 ? 6 : 7;
@@ -14,7 +14,7 @@ const Gallery = ({ viewportWidth }) => {
         {galleryImage.map(({ mob_1x, mob_2x, tab_1x, tab_2x }) => {
           return (
             <GalleryItem
-              key={useId}
+              key={nanoid()}
               image_1x={mob_1x}
               image_2x={mob_2x}
               imageTab_1x={tab_1x}

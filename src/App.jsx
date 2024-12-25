@@ -41,7 +41,7 @@ function App() {
           <Gallery viewportWidth={viewportWidth} />
         </Container>
         <Container footerWrapper>
-          <Questions />/
+          <Questions />
         </Container>
       </main>
       <Container footerWrapper>
