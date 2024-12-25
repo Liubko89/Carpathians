@@ -27,26 +27,26 @@ function App() {
     <>
       <Header blockScrolling={blockScrolling} allowScrolling={allowScrolling} />
       <main>
-        {/* <Container heroWrapper>
+        <Container heroWrapper>
           <Hero
             blockScrolling={blockScrolling}
             allowScrolling={allowScrolling}
           />
-        </Container> */}
+        </Container>
         <Container>
-          {/* <AboutUs /> */}
-          {/* <OurAdvantages /> */}
-          {/* <UpcomingTours viewportWidth={viewportWidth} /> */}
-          {/* <Reviews /> */}
+          <AboutUs />
+          <OurAdvantages />
+          <UpcomingTours viewportWidth={viewportWidth} />
+          <Reviews />
           <Gallery viewportWidth={viewportWidth} />
         </Container>
-        {/* <Container footerWrapper> */}
-        {/* <Questions />/ */}
-        {/* </Container> */}
+        <Container footerWrapper>
+          <Questions />/
+        </Container>
       </main>
-      {/* <Container footerWrapper> */}
-      {/* <Footer /> */}
-      {/* </Container> */}
+      <Container footerWrapper>
+        <Footer />
+      </Container>
     </>
   );
 }

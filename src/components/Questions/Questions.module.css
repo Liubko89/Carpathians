@@ -113,6 +113,7 @@
 @media screen and (min-width: 768px) {
   .section {
     padding: 88px 145px;
+    background-image: url(../../assets/img/tab1x/image_3_tablet.jpg);
 
     .wrapper {
       padding: 40px 42px;
@@ -150,6 +151,12 @@
           }
         }
       }
+    }
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .section {
+      background-image: url(../../assets/img/tab2x/image_3_tablet_2x.jpg);
     }
   }
 }
