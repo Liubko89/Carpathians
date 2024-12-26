@@ -1,12 +1,12 @@
+import css from "./Header.module.css";
 import Logo from "../Logo/Logo";
 import icon from "../../assets/icons.svg";
-import css from "./Header.module.css";
 import ModalWrapper from "../ModalWrapper/ModalWrapper";
 import { useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
 
-const Header = ({ blockScrolling, allowScrolling }) => {
+const Header = ({ viewportWidth, blockScrolling, allowScrolling }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const openModal = () => {
     setModalIsOpen(true);
@@ -20,7 +20,7 @@ const Header = ({ blockScrolling, allowScrolling }) => {
   return (
     <header className={css.header}>
       <Logo />
-      {!modalIsOpen && (
+      {!modalIsOpen && viewportWidth < 1440 && (
         <button className={css.button} onClick={openModal}>
           <svg className={css.icon} width="28" height="15">
             <use href={`${icon}#icon-menu`}></use>
@@ -33,6 +33,8 @@ const Header = ({ blockScrolling, allowScrolling }) => {
           <SocialMediaLinks verticalDirection />
         </ModalWrapper>
       )}
+
+      {viewportWidth >= 1440 && <Navigation />}
     </header>
   );
 };

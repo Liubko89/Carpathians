@@ -11,11 +11,22 @@ import Container from "./components/Container/Container";
 import { useEffect, useState } from "react";
 
 function App() {
-  const viewportWidth = window.innerWidth;
-
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [preventScrolling, setPreventScrolling] = useState(false);
+
   const blockScrolling = () => setPreventScrolling(true);
   const allowScrolling = () => setPreventScrolling(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     preventScrolling
@@ -25,7 +36,11 @@ function App() {
 
   return (
     <>
-      <Header blockScrolling={blockScrolling} allowScrolling={allowScrolling} />
+      <Header
+        viewportWidth={viewportWidth}
+        blockScrolling={blockScrolling}
+        allowScrolling={allowScrolling}
+      />
       <main>
         <Container heroWrapper>
           <Hero

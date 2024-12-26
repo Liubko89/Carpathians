@@ -19,21 +19,26 @@
   .btn {
     max-width: 285px;
   }
+}
 
-  @media screen and (max-width: 340px) {
+@media screen and (max-width: 340px) {
+  .hero {
     .title {
       font-size: 32px;
     }
   }
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .hero {
     .title {
       font-size: 68px;
     }
 
     .descr {
       font-size: 20px;
-      padding: 0 128px;
+      margin: 0 auto;
+      max-width: 470px;
       margin-bottom: 60px;
     }
 
@@ -41,6 +46,25 @@
       max-width: 394px;
       height: 56px;
       font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero {
+    .title {
+      font-size: 88px;
+    }
+
+    .descr {
+      max-width: 675px;
+      font-size: 28px;
+    }
+
+    .btn {
+      max-width: 575px;
+      height: 69px;
+      font-size: 24px;
     }
   }
 }

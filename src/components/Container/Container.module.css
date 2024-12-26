@@ -48,3 +48,26 @@
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .container,
+  .heroWrapper,
+  .footerWrapper {
+    max-width: 1440px;
+  }
+
+  .container {
+    padding: 0 135px;
+  }
+
+  .heroWrapper {
+    padding: 258px 135px 266px;
+    background-image: url(../../assets/img/desk1x/hero_desk_1920-1_desk.jpg);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .heroWrapper {
+      background-image: url(../../assets/img/desk2x/hero_desk_1920-1_desk_2x.jpg);
+    }
+  }
+}

@@ -1,6 +1,6 @@
+import css from "./Hero.module.css";
 import { useState } from "react";
 import ModalBookTour from "../ModalBookTour/ModalBookTour";
-import css from "./Hero.module.css";
 import BookATour from "../BookATour/BookATour";
 import clsx from "clsx";
 

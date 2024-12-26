@@ -14,8 +14,9 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    position: fixed;
-    top: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     right: 32px;
     display: flex;
     align-items: center;
@@ -35,10 +36,17 @@
 @media screen and (min-width: 768px) {
   .header {
     max-width: 768px;
+    height: 108px;
 
     .button {
-      top: 34px;
       right: 20px;
     }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    max-width: 1170px;
+    height: 118px;
   }
 }
