@@ -15,8 +15,10 @@
   .firstParagraph {
     margin-bottom: 8px;
   }
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .aboutUsSection {
     .title {
       font-size: 52px;
     }
@@ -24,6 +26,26 @@
     .firstParagraph,
     .secondParagraph {
       font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .aboutUsSection {
+    margin-bottom: 80px;
+
+    .title {
+      font-size: 68px;
+      margin-bottom: 60px;
+    }
+
+    .firstParagraph {
+      margin-bottom: 12px;
+    }
+
+    .firstParagraph,
+    .secondParagraph {
+      font-size: 24px;
     }
   }
 }

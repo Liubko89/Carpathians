@@ -44,3 +44,20 @@
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .listItem {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    .itemWrapper {
+      max-width: 630px;
+      padding: 12px 12px 12px 126px;
+
+      .descr {
+        font-size: 24px;
+      }
+    }
+  }
+}

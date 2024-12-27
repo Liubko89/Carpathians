@@ -71,3 +71,21 @@
     }
   }
 }
+
+@media screen and (min-width: 1920px) {
+  .container,
+  .heroWrapper,
+  .footerWrapper {
+    max-width: 1920px;
+  }
+
+  .heroWrapper {
+    background-image: url(../../assets/img/desk1x/hero_desk_1920_desk.jpg);
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .heroWrapper {
+      background-image: url(../../assets/img/desk2x/hero_desk_1920_desk_2x.jpg);
+    }
+  }
+}

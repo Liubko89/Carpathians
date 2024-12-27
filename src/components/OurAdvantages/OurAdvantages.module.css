@@ -49,3 +49,31 @@
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .OurAdvantagesSection {
+    margin-bottom: 80px;
+
+    .title {
+      font-size: 68px;
+      margin-bottom: 60px;
+    }
+
+    .list {
+      padding: 80px 0;
+      background-image: url(../../assets/img/desk1x/Advantages_2_desk.jpg),
+        url(../../assets/img/desk1x/Advantages_4_desk.jpg),
+        url(../../assets/img/desk1x/Advantages_3_desk.jpg);
+      background-position: top left, center center, bottom right;
+      background-size: 377px 584px, 377px 502px, 377px 584px;
+    }
+
+    @media screen and (min-resolution: 192dpi) {
+      .list {
+        background-image: url(../../assets/img/desk2x/Advantages_2_desk_2x.jpg),
+          url(../../assets/img/desk2x/Advantages_4_desk_2x.jpg),
+          url(../../assets/img/desk2x/Advantages_3_desk_2x.jpg);
+      }
+    }
+  }
+}
