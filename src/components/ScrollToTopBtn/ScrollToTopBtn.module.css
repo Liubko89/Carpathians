@@ -1,0 +1,42 @@
+.btn {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--main-c);
+  background-color: transparent;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
+
+  &:hover {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--light-c), var(--light-c)) padding-box,
+      linear-gradient(
+          45deg,
+          var(--main-c),
+          var(--secondary-text-c),
+          var(--light-c),
+          var(--main-c),
+          var(--secondary-text-c),
+          var(--light-c)
+        )
+        border-box;
+  }
+
+  .icon {
+    pointer-events: none;
+    fill: var(--main-c);
+    transition: scale 250ms ease-in-out;
+  }
+
+  &:hover,
+  &:active > .icon {
+    scale: 1.1;
+  }
+}

@@ -9,10 +9,12 @@ import Reviews from "./components/Reviews/Reviews";
 import UpcomingTours from "./components/UpcomingTours/UpcomingTours";
 import Container from "./components/Container/Container";
 import { useEffect, useState } from "react";
+import ScrollToTopBtn from "./components/ScrollToTopBtn/ScrollToTopBtn";
 
 function App() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  const [scrolledFromTop, setScrolledFromTop] = useState(window.scrollY);
   const [preventScrolling, setPreventScrolling] = useState(false);
 
   const blockScrolling = () => setPreventScrolling(true);
@@ -31,12 +33,21 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrolledFromTop(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     preventScrolling
       ? document.body.classList.add("preventScrolling")
       : document.body.classList.remove("preventScrolling");
   }, [preventScrolling]);
-
-  console.log(window);
 
   return (
     <>
@@ -66,6 +77,7 @@ function App() {
       <Container footerWrapper>
         <Footer />
       </Container>
+      {scrolledFromTop > viewportHeight && <ScrollToTopBtn />}
     </>
   );
 }
