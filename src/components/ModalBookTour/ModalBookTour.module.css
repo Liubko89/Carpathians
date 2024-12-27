@@ -23,12 +23,6 @@
     height: max-content;
     background-color: white;
   }
-
-  @media screen and (min-width: 768px) {
-    .modal {
-      max-width: 478px;
-    }
-  }
 }
 
 .showModal {
@@ -39,4 +33,20 @@
   opacity: 0;
   scale: 0;
   pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    .modal {
+      max-width: 478px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    .modal {
+      max-width: 774px;
+    }
+  }
 }

@@ -11,6 +11,7 @@
 }
 
 .wrapper {
+  background-color: var(--light-c);
   padding: 52px 32px 36px;
   color: var(--primary-text-c);
 
@@ -24,7 +25,8 @@
     color: var(--secondary-text-c);
     text-align: center;
     font-size: 14px;
-    padding: 0 15px;
+    max-width: 282px;
+    margin: 0 auto;
     margin-bottom: 24px;
   }
 
@@ -44,10 +46,10 @@
 
       .input {
         width: 100%;
-        height: 28px;
         color: var(--primary-text-c);
         border: none;
         border-bottom: 1px solid var(--border-c);
+        padding: 0 4px 8px;
         outline: none;
         background-color: inherit;
 
@@ -67,12 +69,17 @@
     }
 
     .checkboxWrapper {
+      margin-bottom: 24px;
+
       .label {
         position: relative;
         padding-left: 36px;
         display: flex;
         align-items: center;
-        margin-bottom: 28px;
+
+        &:not(:last-child) {
+          margin-bottom: 28px;
+        }
       }
 
       .customCheckbox {
@@ -115,6 +122,7 @@
     .description {
       font-size: 18px;
       margin-bottom: 32px;
+      max-width: 374px;
     }
 
     form {
@@ -136,8 +144,54 @@
       }
 
       .checkboxWrapper {
+        margin-bottom: 32px;
+
         .label {
           font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    padding: 116px 100px 60px;
+
+    .title {
+      font-size: 60px;
+      margin-bottom: 28px;
+    }
+
+    .description {
+      font-size: 24px;
+      max-width: 524px;
+    }
+
+    form {
+      .inputErrorWrap {
+        .input,
+        .error {
+          font-size: 24px;
+        }
+
+        .input {
+          padding: 0 8px 8px;
+          &::placeholder {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .checkboxWrapper {
+        margin-bottom: 44px;
+
+        .label {
+          font-size: 24px;
+
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
         }
       }
     }

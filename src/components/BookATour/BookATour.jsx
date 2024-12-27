@@ -1,5 +1,5 @@
-import { ErrorMessage, Field, Form, Formik } from "formik";
 import css from "./BookATour.module.css";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import icons from "../../assets/icons.svg";
 import { validationSchema } from "../../helpers/schema";
 import clsx from "clsx";

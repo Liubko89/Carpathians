@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [preventScrolling, setPreventScrolling] = useState(false);
 
   const blockScrolling = () => setPreventScrolling(true);
@@ -20,6 +21,7 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       setViewportWidth(window.innerWidth);
+      setViewportHeight(window.innerHeight);
     };
 
     window.addEventListener("resize", handleResize);
@@ -33,6 +35,8 @@ function App() {
       ? document.body.classList.add("preventScrolling")
       : document.body.classList.remove("preventScrolling");
   }, [preventScrolling]);
+
+  console.log(window);
 
   return (
     <>

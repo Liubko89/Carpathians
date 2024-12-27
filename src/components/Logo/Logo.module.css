@@ -8,7 +8,12 @@
   transition: scale 250ms ease-in-out;
 
   &:hover {
-    scale: 1.25;
+    scale: 1.2;
+  }
+
+  .logoIcon {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -18,11 +23,6 @@
     height: 60px;
 
     left: 20px;
-
-    .logoIcon {
-      width: 100%;
-      height: 100%;
-    }
   }
 }
 
