@@ -50,6 +50,17 @@
   }
 }
 
+.section {
+  margin-bottom: 52px;
+}
+
+.titleH2 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 28px;
+  font-size: 32px;
+}
+
 @media screen and (min-width: 768px) {
   .react-multi-carousel-list {
     margin-bottom: 32px;
@@ -64,6 +75,15 @@
     top: 20px;
     right: 20px;
   }
+
+  .section {
+    margin-bottom: 80px;
+  }
+
+  .titleH2 {
+    font-size: 52px;
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -75,5 +95,10 @@
   .closeBtn {
     top: 40px;
     right: 40px;
+  }
+
+  .titleH2 {
+    font-size: 68px;
+    margin-bottom: 60px;
   }
 }

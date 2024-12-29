@@ -1,13 +1,4 @@
 .OurAdvantagesSection {
-  margin-bottom: 52px;
-
-  .title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 28px;
-  }
-
   .list {
     padding: 87px 0;
     background-color: var(--spare-bg);
@@ -26,13 +17,6 @@
 
 @media screen and (min-width: 768px) {
   .OurAdvantagesSection {
-    margin-bottom: 80px;
-
-    .title {
-      font-size: 52px;
-      margin-bottom: 40px;
-    }
-
     .list {
       background-image: url(../../assets/img/tab1x/Advantages_2_tab.jpg),
         url(../../assets/img/tab1x/Advantages_3_tab.jpg);
@@ -52,13 +36,6 @@
 
 @media screen and (min-width: 1440px) {
   .OurAdvantagesSection {
-    margin-bottom: 80px;
-
-    .title {
-      font-size: 68px;
-      margin-bottom: 60px;
-    }
-
     .list {
       padding: 80px 0;
       background-image: url(../../assets/img/desk1x/Advantages_2_desk.jpg),

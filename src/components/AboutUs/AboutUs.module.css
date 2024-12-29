@@ -1,13 +1,4 @@
 .aboutUsSection {
-  margin-bottom: 52px;
-
-  .title {
-    text-align: center;
-    font-weight: 400;
-    margin-bottom: 28px;
-    font-size: 32px;
-  }
-
   p {
     color: var(--secondary-text-c);
   }
@@ -19,10 +10,6 @@
 
 @media screen and (min-width: 768px) {
   .aboutUsSection {
-    .title {
-      font-size: 52px;
-    }
-
     .firstParagraph,
     .secondParagraph {
       font-size: 20px;
@@ -32,13 +19,6 @@
 
 @media screen and (min-width: 1440px) {
   .aboutUsSection {
-    margin-bottom: 80px;
-
-    .title {
-      font-size: 68px;
-      margin-bottom: 60px;
-    }
-
     .firstParagraph {
       margin-bottom: 12px;
     }

@@ -1,9 +1,10 @@
+import clsx from "clsx";
 import css from "./AboutUs.module.css";
 
 const AboutUs = () => {
   return (
-    <section className={css.aboutUsSection} id="aboutUs">
-      <h2 className={css.title}>About us</h2>
+    <section className={clsx("section", css.aboutUsSection)} id="aboutUs">
+      <h2 className="titleH2">About us</h2>
       <p className={css.firstParagraph}>
         Travel is our life. We have been organizing tours to the Carpathians
         since 2007 and have never been bored for a single day. The Carpathians

@@ -9,7 +9,7 @@ const Gallery = ({ viewportWidth }) => {
 
   return (
     <section className={css.section} id="gallery">
-      <h2 className={css.title}>Gallery</h2>
+      <h2 className="titleH2">Gallery</h2>
       <CarouselSliders slide={7} showDots={true} handleSlides={handleSlides}>
         {galleryImage.map(({ mob_1x, mob_2x, tab_1x, tab_2x }) => {
           return (

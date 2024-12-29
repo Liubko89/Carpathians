@@ -1,21 +1,15 @@
 .section {
   margin-bottom: 104px;
-
-  .title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 28px;
-  }
 }
 
 @media screen and (min-width: 768px) {
   .section {
     margin-bottom: 144px;
+  }
+}
 
-    .title {
-      font-size: 52px;
-      margin-bottom: 40px;
-    }
+@media screen and (min-width: 1440px) {
+  .section {
+    margin-bottom: 80px;
   }
 }

@@ -1,10 +1,11 @@
 import css from "./OurAdvantages.module.css";
 import OurAdvantagesListItem from "../OurAdvantagesListItem/OurAdvantagesListItem";
+import clsx from "clsx";
 
 const OurAdvantages = () => {
   return (
-    <section className={css.OurAdvantagesSection}>
-      <h2 className={css.title}>Our advantages</h2>
+    <section className={clsx("section", css.OurAdvantagesSection)}>
+      <h2 className="titleH2">Our advantages</h2>
       <ul className={css.list}>
         <OurAdvantagesListItem string={"author's tours"} />
         <OurAdvantagesListItem string={"individual approach"} />

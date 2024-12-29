@@ -5,12 +5,10 @@ import CarouselSliders from "../CarouselSliders/CarouselSliders";
 import UpcomingTour from "../UpcomingTour/UpcomingTour";
 
 const UpcomingTours = ({ viewportWidth }) => {
-  const handleSlides = viewportWidth < 768 ? 2 : 1;
-
   return (
     <section className={css.section} id="tours">
-      <h2 className={css.title}>Upcoming tours</h2>
-      <CarouselSliders handleSlides={handleSlides}>
+      <h2 className="titleH2">Upcoming tours</h2>
+      <CarouselSliders viewportWidth={viewportWidth}>
         {tours.map((tour) => {
           return (
             <UpcomingTour

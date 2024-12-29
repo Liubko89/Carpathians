@@ -17,7 +17,7 @@ const Hero = ({ blockScrolling, allowScrolling }) => {
   };
 
   return (
-    <section className={css.hero}>
+    <section className={css.heroSection}>
       <h1 className={css.title}>Tours to the Carpathians from Lviv</h1>
       <p className={css.descr}>
         Journeys to the very heart of the Carpathians for those who want a real
