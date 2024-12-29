@@ -67,7 +67,7 @@ function App() {
           <AboutUs />
           <OurAdvantages />
           <UpcomingTours viewportWidth={viewportWidth} />
-          <Reviews />
+          <Reviews viewportWidth={viewportWidth} />
           <Gallery viewportWidth={viewportWidth} />
         </Container>
         <Container footerWrapper>

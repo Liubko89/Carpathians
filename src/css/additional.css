@@ -87,6 +87,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .react-multi-carousel-list {
+    margin-bottom: 0;
+  }
+
   .btn {
     height: 69px;
     font-size: 24px;

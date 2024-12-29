@@ -28,6 +28,11 @@
       background-color: var(--main-c);
       border: none;
       text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--primary-text-c);
+      }
     }
   }
 }
@@ -47,6 +52,27 @@
 
       .btn {
         font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .itemWrapper {
+    max-width: 377px;
+
+    .descrWrapper {
+      .subTitle {
+        font-size: 28px;
+      }
+
+      .descr {
+        font-size: 24px;
+      }
+
+      .btn {
+        font-size: 24px;
+        height: 68px;
       }
     }
   }

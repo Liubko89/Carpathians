@@ -6,3 +6,9 @@
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 1440px) {
+  .galleryItem {
+    max-width: 575px;
+    max-height: 445px;
+  }
+}

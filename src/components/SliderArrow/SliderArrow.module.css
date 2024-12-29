@@ -1,0 +1,78 @@
+.btn {
+  position: absolute;
+  bottom: -72px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--light-c), var(--light-c)) padding-box,
+      linear-gradient(
+          45deg,
+          var(--main-c),
+          var(--secondary-text-c),
+          var(--light-c),
+          var(--main-c),
+          var(--secondary-text-c),
+          var(--light-c)
+        )
+        border-box;
+  }
+
+  .icon {
+    pointer-events: none;
+    fill: var(--main-c);
+    transition: scale 250ms ease-in-out;
+  }
+
+  &:hover,
+  &:active > .icon {
+    scale: 1.1;
+  }
+}
+
+.prevBtn {
+  left: 25%;
+}
+
+.nextBtn {
+  transform: rotate(180deg);
+  right: 25%;
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+  .prevBtn {
+    left: 35%;
+  }
+
+  .nextBtn {
+    right: 35%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .btn {
+    width: 40px;
+    height: 40px;
+    bottom: -80px;
+
+    .icon {
+      width: 19px;
+      height: 34px;
+    }
+  }
+}

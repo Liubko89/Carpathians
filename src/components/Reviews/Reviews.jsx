@@ -1,26 +1,40 @@
 import css from "./Reviews.module.css";
-import ReviewTemplate from "../ReviewTemplate/ReviewTemplate";
+import ReviewItem from "../ReviewItem/ReviewItem";
 import reviews from "../../helpers/reviews";
 import clsx from "clsx";
+import { useState } from "react";
+import { useEffect } from "react";
 
-const Reviews = () => {
+const Reviews = ({ viewportWidth }) => {
+  const [renderList, setRenderList] = useState(reviews);
+
+  useEffect(() => {
+    viewportWidth < 1440
+      ? setRenderList(reviews.slice(0, 2))
+      : setRenderList(reviews);
+  }, [viewportWidth]);
+
   return (
     <section className={clsx("section", css.section)} id="reviews">
       <h2 className="titleH2">Reviews</h2>
       <ul className={css.list}>
-        {reviews.map((review) => {
+        {renderList.map((review) => {
           return (
-            <ReviewTemplate
+            <ReviewItem
               key={review.id}
               name={review.name}
               mobImage={review.mobImage}
               mobImage2x={review.mobImage2x}
               tabImage={review.tabImage}
               tabImage2x={review.tabImage2x}
+              deskImage={review.deskImage}
+              deskImage2x={review.deskImage2x}
               mobPhoto={review.mobPhoto}
               mobPhoto2x={review.mobPhoto2x}
               tabPhoto={review.tabPhoto}
               tabPhoto2x={review.tabPhoto2x}
+              deskPhoto={review.deskPhoto}
+              deskPhoto2x={review.deskPhoto2x}
               textReview={review.textReview}
             />
           );

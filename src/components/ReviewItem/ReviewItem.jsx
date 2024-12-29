@@ -1,19 +1,23 @@
+import css from "./ReviewItem.module.css";
 import { useState } from "react";
-import css from "./ReviewTemplate.module.css";
 
 import icons from "../../assets/icons.svg";
 import clsx from "clsx";
 
-const ReviewTemplate = ({
+const ReviewItem = ({
   name,
   mobImage,
   mobImage2x,
   tabImage,
   tabImage2x,
+  deskImage,
+  deskImage2x,
   mobPhoto,
   mobPhoto2x,
   tabPhoto,
   tabPhoto2x,
+  deskPhoto,
+  deskPhoto2x,
   textReview,
 }) => {
   const [overlay, setOverlay] = useState(false);
@@ -22,6 +26,10 @@ const ReviewTemplate = ({
       <div className={css.wrapper}>
         <div className={css.content}>
           <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcSet={`${deskImage} 1x, ${deskImage2x} 2x`}
+            />
             <source
               media="(min-width: 768px)"
               srcSet={`${tabImage} 1x, ${tabImage2x} 2x`}
@@ -49,6 +57,10 @@ const ReviewTemplate = ({
         <div className={clsx(css.overlay, overlay && css.turnArround)}>
           <picture>
             <source
+              media="(min-width: 1440px)"
+              srcSet={`${deskPhoto} 1x, ${deskPhoto2x} 2x`}
+            />
+            <source
               media="(min-width: 768px)"
               srcSet={`${tabPhoto} 1x, ${tabPhoto2x} 2x`}
             />
@@ -68,4 +80,4 @@ const ReviewTemplate = ({
   );
 };
 
-export default ReviewTemplate;
+export default ReviewItem;

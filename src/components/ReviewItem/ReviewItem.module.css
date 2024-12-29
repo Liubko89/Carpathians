@@ -111,13 +111,12 @@
     max-width: 354px;
 
     &:first-child {
-      margin-right: 10px;
       margin-bottom: 0;
     }
 
     .wrapper {
       .content {
-        padding: 208px 20px 51px;
+        padding: 208px 20px 48px;
         background-image: url(../../assets/img/tab1x/Review_tablet.jpg);
 
         .listTitle {
@@ -133,6 +132,29 @@
       @media screen and (min-resolution: 192dpi) {
         .content {
           background-image: url(../../assets/img/tab2x/Review_tablet_2x.jpg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .listItem {
+    max-width: 377px;
+
+    .wrapper {
+      .content {
+        padding: 217px 28px 48px;
+        background-image: url(../../assets/img/desk1x/Review_desk-min.jpg);
+
+        .listTitle {
+          font-size: 28px;
+        }
+      }
+
+      @media screen and (min-resolution: 192dpi) {
+        .content {
+          background-image: url(../../assets/img/desk2x/Review_desk_2x.jpg);
         }
       }
     }

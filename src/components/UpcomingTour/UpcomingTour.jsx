@@ -8,10 +8,16 @@ const UpcomingTour = ({
   mobImage2x,
   tabImage,
   tabImage2x,
+  deskImage,
+  deskImage2x,
 }) => {
   return (
     <div className={css.itemWrapper}>
       <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcSet={`${deskImage} 1x, ${deskImage2x} 2x`}
+        />
         <source
           media="(min-width: 768px)"
           srcSet={`${tabImage} 1x, ${tabImage2x} 2x`}
