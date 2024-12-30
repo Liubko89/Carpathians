@@ -15,6 +15,7 @@ const Gallery = ({ viewportWidth }) => {
     };
     handleSlides();
   }, [viewportWidth]);
+
   return (
     <section className={css.section} id="gallery">
       <h2 className="titleH2">Gallery</h2>

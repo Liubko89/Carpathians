@@ -23,8 +23,9 @@
     .content {
       padding: 204px 35px 48px;
       background-image: url(../../assets/img/mob1x/Review_mobile.jpg);
+      background-position: top center;
+      background-size: 100% 134px;
       background-repeat: no-repeat;
-      background-size: contain;
 
       .img {
         width: 100px;

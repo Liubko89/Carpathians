@@ -160,3 +160,63 @@
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .section {
+    padding: 244px 0;
+    background-image: url(../../assets/img/desk1x/image_3_desk_desk.jpg);
+
+    .wrapper {
+      max-width: 774px;
+      margin: 0 auto;
+      padding: 60px 46px;
+
+      .title {
+        padding: 0;
+        font-size: 48px;
+        margin-bottom: 32px;
+      }
+
+      .descr {
+        font-size: 20px;
+        padding: 0 90px;
+        margin-bottom: 44px;
+      }
+
+      form {
+        .inputWrapper {
+          padding: 0 52px 28px;
+
+          .input {
+            font-size: 24px;
+          }
+
+          .error {
+            font-size: 18px;
+            padding-left: 52px;
+          }
+        }
+
+        .textareaWrapper {
+          padding: 0 52px;
+          margin-bottom: 44px;
+
+          .textarea {
+            font-size: 24px;
+          }
+        }
+
+        .btn {
+          font-size: 24px;
+          height: 72px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .section {
+      background-image: url(../../assets/img/desk2x/image_3_desk_desk_2x.jpg);
+    }
+  }
+}

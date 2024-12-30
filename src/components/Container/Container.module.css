@@ -73,7 +73,6 @@
 }
 
 @media screen and (min-width: 1920px) {
-  .container,
   .heroWrapper,
   .footerWrapper {
     max-width: 1920px;

@@ -6,12 +6,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 const Reviews = ({ viewportWidth }) => {
-  const [renderList, setRenderList] = useState(reviews);
+  const [renderList, setRenderList] = useState(reviews.slice(0, 2));
 
   useEffect(() => {
-    viewportWidth < 1440
-      ? setRenderList(reviews.slice(0, 2))
-      : setRenderList(reviews);
+    viewportWidth >= 1440
+      ? setRenderList(reviews)
+      : setRenderList(reviews.slice(0, 2));
   }, [viewportWidth]);
 
   return (

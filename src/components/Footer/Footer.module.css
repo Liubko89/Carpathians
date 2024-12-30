@@ -125,3 +125,21 @@
     }
   }
 }
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    .title {
+      font-size: 60px;
+    }
+
+    .contactsList {
+      .contact {
+        font-size: 24px;
+      }
+    }
+
+    .copyRightWrap {
+      margin-top: 32px;
+    }
+  }
+}
