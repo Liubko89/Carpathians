@@ -45,24 +45,8 @@
   }
 
   .btn {
-    cursor: pointer;
-    position: fixed;
     right: 32px;
     top: 20px;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    transition: scale 250ms ease-in-out;
-
-    &:hover {
-      scale: 1.25;
-    }
-
-    .icon {
-      stroke: var(--light-c);
-      pointer-events: none;
-    }
   }
 
   @media screen and (max-height: 666.98px) {

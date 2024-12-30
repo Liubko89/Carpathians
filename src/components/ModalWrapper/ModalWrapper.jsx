@@ -2,6 +2,7 @@ import css from "./ModalWrapper.module.css";
 import icons from "../../assets/icons.svg";
 import { useCallback, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
+import CloseButton from "../CloseButton/CloseButton";
 
 const ModalWrapper = ({ closeModal, modalIsOpen, children }) => {
   const modalWrapperRef = useRef(null);
@@ -56,11 +57,11 @@ const ModalWrapper = ({ closeModal, modalIsOpen, children }) => {
       >
         {children}
       </div>
-      <button className={css.btn} onClick={handleCloseModal}>
-        <svg className={css.icon} width="40" height="40">
-          <use href={`${icons}#icon-close`}></use>
-        </svg>
-      </button>
+      <CloseButton
+        closeModal={handleCloseModal}
+        color="iconLight"
+        className1={css.btn}
+      />
     </div>
   );
 };

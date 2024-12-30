@@ -66,7 +66,11 @@ function App() {
         <Container>
           <AboutUs />
           <OurAdvantages />
-          <UpcomingTours viewportWidth={viewportWidth} />
+          <UpcomingTours
+            blockScrolling={blockScrolling}
+            allowScrolling={allowScrolling}
+            viewportWidth={viewportWidth}
+          />
           <Reviews viewportWidth={viewportWidth} />
           <Gallery viewportWidth={viewportWidth} />
         </Container>

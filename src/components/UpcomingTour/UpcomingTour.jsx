@@ -1,6 +1,7 @@
 import css from "./UpcomingTour.module.css";
 
 const UpcomingTour = ({
+  openModal,
   name,
   alt,
   price,
@@ -32,7 +33,7 @@ const UpcomingTour = ({
       <div className={css.descrWrapper}>
         <h3 className={css.subTitle}>{name}</h3>
         <p className={css.descr}>From UAH {price}/person</p>
-        <button className={css.btn} type="button">
+        <button className={css.btn} type="button" onClick={openModal}>
           More Details
         </button>
       </div>

@@ -4,8 +4,21 @@ import "slick-carousel/slick/slick-theme.css";
 import tours from "../../helpers/tours";
 import UpcomingTour from "../UpcomingTour/UpcomingTour";
 import SlickCarousel from "../SlickCarousel/SlickCarousel";
+import MoreDetailsModal from "../MoreDetailsModal/MoreDetailsModal";
+import { useState } from "react";
 
-const UpcomingTours = ({ viewportWidth }) => {
+const UpcomingTours = ({ blockScrolling, allowScrolling, viewportWidth }) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+    blockScrolling();
+  };
+  const closeModal = () => {
+    setShowModal(false);
+    allowScrolling();
+  };
+
   return (
     <section className={css.section} id="tours">
       <h2 className="titleH2">Upcoming tours</h2>
@@ -15,6 +28,7 @@ const UpcomingTours = ({ viewportWidth }) => {
           return (
             <li key={tour.id}>
               <UpcomingTour
+                openModal={openModal}
                 id={tour.id}
                 name={tour.name}
                 alt={tour.alt}
@@ -30,6 +44,15 @@ const UpcomingTours = ({ viewportWidth }) => {
           );
         })}
       </SlickCarousel>
+      {showModal && (
+        <MoreDetailsModal closeModal={closeModal}>
+          <div style={{ width: "250px", margin: "0 auto", color: "white" }}>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
+            explicabo eos quae error vero aperiam magni dicta expedita corrupti
+            molestias!
+          </div>
+        </MoreDetailsModal>
+      )}
     </section>
   );
 };

@@ -3,6 +3,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import icons from "../../assets/icons.svg";
 import { validationSchema } from "../../helpers/schema";
 import clsx from "clsx";
+import CloseButton from "../CloseButton/CloseButton";
 
 const BookATour = ({ closeModal }) => {
   const initialValues = {
@@ -109,11 +110,7 @@ const BookATour = ({ closeModal }) => {
           </button>
         </Form>
       </Formik>
-      <button className="closeBtn" onClick={closeModal} type="button">
-        <svg className="iconDark" width="40" height="40">
-          <use href={`${icons}#icon-close`}></use>
-        </svg>
-      </button>
+      <CloseButton closeModal={closeModal} color="iconDark" />
     </div>
   );
 };
