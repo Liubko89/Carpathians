@@ -1,0 +1,19 @@
+.tourDetailsWrapper {
+  /* background-color: var(--light-c); */
+  height: 100vh;
+  background-color: red;
+
+  .activitiesWrapper {
+    background-color: blue;
+
+    .activities {
+      &:not(:last-child) {
+        width: 375px;
+      }
+    }
+  }
+
+  .priceWrapper {
+    background-color: green;
+  }
+}

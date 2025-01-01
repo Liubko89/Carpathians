@@ -1,7 +1,14 @@
 import Slider from "react-slick";
 import SliderArrow from "../SliderArrow/SliderArrow";
 
-const SlickCarousel = ({ viewportWidth, list, children, slides = null }) => {
+const SlickCarousel = ({
+  viewportWidth,
+  list,
+  children,
+  slides = null,
+  customWidth = false,
+  hideArrows = false,
+}) => {
   const handleSlides = () => {
     if (viewportWidth < 768) {
       return 1;
@@ -16,6 +23,7 @@ const SlickCarousel = ({ viewportWidth, list, children, slides = null }) => {
     dots: true,
     infinite: false,
     speed: 500,
+    variableWidth: customWidth ? true : false,
     slidesToShow: slides ? slides : handleSlides(),
     slidesToScroll: slides ? slides : handleSlides(),
     prevArrow: <SliderArrow direction="prev" />,
@@ -25,6 +33,7 @@ const SlickCarousel = ({ viewportWidth, list, children, slides = null }) => {
         listLength={list.length - (slides ? slides : handleSlides())}
       />
     ),
+    arrows: hideArrows ? false : true,
   };
   return (
     <ul>

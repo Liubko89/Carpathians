@@ -1,39 +1,33 @@
 import css from "./UpcomingTour.module.css";
 
-const UpcomingTour = ({
-  openModal,
-  name,
-  alt,
-  price,
-  mobImage,
-  mobImage2x,
-  tabImage,
-  tabImage2x,
-  deskImage,
-  deskImage2x,
-}) => {
+const UpcomingTour = ({ openModal, tour, chooseTour }) => {
+  const handleClick = () => {
+    openModal();
+    chooseTour(tour.id);
+  };
+
   return (
     <div className={css.itemWrapper}>
       <picture>
         <source
           media="(min-width: 1440px)"
-          srcSet={`${deskImage} 1x, ${deskImage2x} 2x`}
+          srcSet={`${tour.deskImage} 1x, ${tour.deskImage2x} 2x`}
         />
         <source
           media="(min-width: 768px)"
-          srcSet={`${tabImage} 1x, ${tabImage2x} 2x`}
+          srcSet={`${tour.tabImage} 1x, ${tour.tabImage2x} 2x`}
         />
         <source
           media="(max-width: 767.98px)"
-          srcSet={`${mobImage} 1x, ${mobImage2x} 2x`}
+          srcSet={`${tour.mobImage} 1x, ${tour.mobImage2x} 2x`}
         />
-        <img className={css.img} src={mobImage} alt={alt} />
+        <img className={css.img} src={tour.mobImage} alt={tour.alt} />
       </picture>
 
       <div className={css.descrWrapper}>
         <h3 className={css.subTitle}>{name}</h3>
-        <p className={css.descr}>From UAH {price}/person</p>
-        <button className={css.btn} type="button" onClick={openModal}>
+        <p className={css.descr}>From UAH {tour.price}/person</p>
+        <button className={css.btn} type="button" onClick={handleClick}>
           More Details
         </button>
       </div>

@@ -81,7 +81,9 @@ function App() {
       <Container footerWrapper>
         <Footer />
       </Container>
-      {scrolledFromTop > viewportHeight && <ScrollToTopBtn />}
+      {scrolledFromTop > viewportHeight && !preventScrolling && (
+        <ScrollToTopBtn />
+      )}
     </>
   );
 }

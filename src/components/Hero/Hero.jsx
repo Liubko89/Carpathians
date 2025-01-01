@@ -3,6 +3,7 @@ import { useState } from "react";
 import ModalBookTour from "../ModalBookTour/ModalBookTour";
 import BookATour from "../BookATour/BookATour";
 import clsx from "clsx";
+import { useEffect } from "react";
 
 const Hero = ({ blockScrolling, allowScrolling }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -13,8 +14,13 @@ const Hero = ({ blockScrolling, allowScrolling }) => {
   };
   const closeModal = () => {
     setModalIsOpen(false);
-    allowScrolling();
   };
+
+  useEffect(() => {
+    if (!modalIsOpen) {
+      allowScrolling();
+    }
+  }, [modalIsOpen]);
 
   return (
     <section className={css.heroSection}>

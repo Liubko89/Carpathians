@@ -6,9 +6,13 @@ import UpcomingTour from "../UpcomingTour/UpcomingTour";
 import SlickCarousel from "../SlickCarousel/SlickCarousel";
 import MoreDetailsModal from "../MoreDetailsModal/MoreDetailsModal";
 import { useState } from "react";
+import TourDetails from "../TourDetails/TourDetails";
 
 const UpcomingTours = ({ blockScrolling, allowScrolling, viewportWidth }) => {
   const [showModal, setShowModal] = useState(false);
+  const [chosenTourId, setChosenTourId] = useState(null);
+  const chooseTour = (id) => setChosenTourId(id);
+  const tour = tours.find((tour) => tour.id === chosenTourId);
 
   const openModal = () => {
     setShowModal(true);
@@ -29,16 +33,8 @@ const UpcomingTours = ({ blockScrolling, allowScrolling, viewportWidth }) => {
             <li key={tour.id}>
               <UpcomingTour
                 openModal={openModal}
-                id={tour.id}
-                name={tour.name}
-                alt={tour.alt}
-                price={tour.price}
-                mobImage={tour.mobImage}
-                mobImage2x={tour.mobImage2x}
-                tabImage={tour.tabImage}
-                tabImage2x={tour.tabImage2x}
-                deskImage={tour.deskImage}
-                deskImage2x={tour.deskImage2x}
+                tour={tour}
+                chooseTour={chooseTour}
               />
             </li>
           );
@@ -46,11 +42,7 @@ const UpcomingTours = ({ blockScrolling, allowScrolling, viewportWidth }) => {
       </SlickCarousel>
       {showModal && (
         <MoreDetailsModal closeModal={closeModal}>
-          <div style={{ width: "250px", margin: "0 auto", color: "white" }}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-            explicabo eos quae error vero aperiam magni dicta expedita corrupti
-            molestias!
-          </div>
+          <TourDetails tour={tour} viewportWidth={viewportWidth} />
         </MoreDetailsModal>
       )}
     </section>

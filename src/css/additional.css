@@ -26,6 +26,7 @@
 }
 
 .closeBtn {
+  z-index: 1000;
   cursor: pointer;
   position: absolute;
   right: 12px;

@@ -3,12 +3,9 @@
   z-index: 1;
   top: 0;
   bottom: 0;
-  padding-top: 100px;
   width: 100%;
   max-width: 315px;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (max-width: 375px) {
