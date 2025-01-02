@@ -6,8 +6,8 @@ const SlickCarousel = ({
   list,
   children,
   slides = null,
-  customWidth = false,
   hideArrows = false,
+  appendCustomDots = false,
 }) => {
   const handleSlides = () => {
     if (viewportWidth < 768) {
@@ -23,9 +23,9 @@ const SlickCarousel = ({
     dots: true,
     infinite: false,
     speed: 500,
-    variableWidth: customWidth ? true : false,
     slidesToShow: slides ? slides : handleSlides(),
     slidesToScroll: slides ? slides : handleSlides(),
+    arrows: hideArrows ? false : true,
     prevArrow: <SliderArrow direction="prev" />,
     nextArrow: (
       <SliderArrow
@@ -33,11 +33,45 @@ const SlickCarousel = ({
         listLength={list.length - (slides ? slides : handleSlides())}
       />
     ),
-    arrows: hideArrows ? false : true,
   };
+
+  const customDots = {
+    appendDots: (dots) => (
+      <div
+        style={{
+          backgroundColor: "transparent",
+          position: "absolute",
+          bottom: "20px",
+          left: "center",
+          borderRadius: "10px",
+          padding: "10px",
+        }}
+      >
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "30px",
+          color: "blue",
+          border: "1px blue solid",
+        }}
+      >
+        {i + 1}
+      </div>
+    ),
+  };
+
   return (
     <ul>
-      <Slider {...settings}>{children}</Slider>
+      {!appendCustomDots ? (
+        <Slider {...settings}>{children}</Slider>
+      ) : (
+        <Slider {...settings} {...customDots}>
+          {children}
+        </Slider>
+      )}
     </ul>
   );
 };
