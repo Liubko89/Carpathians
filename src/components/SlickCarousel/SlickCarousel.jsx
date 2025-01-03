@@ -50,17 +50,6 @@ const SlickCarousel = ({
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
-    customPaging: (i) => (
-      <div
-        style={{
-          width: "30px",
-          color: "blue",
-          border: "1px blue solid",
-        }}
-      >
-        {i + 1}
-      </div>
-    ),
   };
 
   return (

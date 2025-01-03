@@ -26,7 +26,7 @@
 }
 
 .closeBtn {
-  z-index: 1000;
+  z-index: 6;
   cursor: pointer;
   position: absolute;
   right: 12px;
@@ -60,6 +60,17 @@
   font-weight: 400;
   margin-bottom: 28px;
   font-size: 32px;
+}
+
+.slick-dots li button::before {
+  font-size: 12px;
+  opacity: 1;
+  color: var(--dots-c);
+}
+
+.slick-dots li.slick-active button::before {
+  opacity: 1;
+  color: var(--dots-active-c);
 }
 
 @media screen and (min-width: 768px) {

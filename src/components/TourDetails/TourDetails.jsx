@@ -9,42 +9,63 @@ const TourDetails = ({ tour, viewportWidth }) => {
         viewportWidth={viewportWidth}
         list={tour.moreDetails}
         slides={1}
-        hideArrows
+        hideArrows={viewportWidth >= 1440 ? false : true}
         appendCustomDots
       >
-        {tour.moreDetails.map(({ day, bgImage, bgImage2x, activities }) => {
-          return (
-            <li className={css.listItem} key={day}>
-              <picture className={css.picture}>
-                <source
-                  media="(max-width: 768px)"
-                  srcSet={`${bgImage} 1x, ${bgImage2x} 2x`}
-                />
-                <img className={css.image} src={bgImage} alt={tour.alt} />
-              </picture>
+        {tour.moreDetails.map(
+          ({
+            day,
+            bgImage,
+            bgImage2x,
+            bgImageTab,
+            bgImageTab2x,
+            bgImageDesk,
+            bgImageDesk2x,
+            activities,
+          }) => {
+            return (
+              <li className={css.listItem} key={day}>
+                <picture className={css.picture}>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcSet={`${bgImageDesk} 1x, ${bgImageDesk2x} 2x`}
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcSet={`${bgImageTab} 1x, ${bgImageTab2x} 2x`}
+                  />
+                  <source
+                    media="(max-width: 768px)"
+                    srcSet={`${bgImage} 1x, ${bgImage2x} 2x`}
+                  />
+                  <img className={css.image} src={bgImage} alt={tour.alt} />
+                </picture>
 
-              <div className={css.activities}>
-                <h3>{tour.name}</h3>
-                <p>{day}</p>
-                <ul>
-                  {activities.map((activity) => {
-                    return (
-                      <li key={nanoid()}>
-                        <p>{activity}</p>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </li>
-          );
-        })}
+                <div className={css.activities}>
+                  <h3 className={css.tourTitle}>{tour.name}</h3>
+                  <p className={css.tourDay}>{day}</p>
+                  <ul className={css.activitiesList}>
+                    {activities.map((activity) => {
+                      return (
+                        <li className={css.activitiesItem} key={nanoid()}>
+                          <p>{activity}</p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </li>
+            );
+          }
+        )}
       </SlickCarousel>
       <div className={css.priceWrapper}>
-        <p>
-          <span>uah</span> {tour.price}/person
+        <p className={css.tourPrice}>
+          <span className={css.currency}>uah</span> {tour.price}/person
         </p>
-        <button type="button">book a tour</button>
+        <button className="btn" type="button">
+          book a tour
+        </button>
       </div>
     </div>
   );

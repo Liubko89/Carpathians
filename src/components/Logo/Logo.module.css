@@ -3,7 +3,7 @@
   left: 32px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 999;
+  z-index: 2;
   fill: var(--light-c);
   transition: scale 250ms ease-in-out;
 

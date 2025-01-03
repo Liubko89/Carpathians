@@ -7,4 +7,6 @@
   --border-c: rgb(163, 165, 163);
   --error-c: rgb(150, 53, 53);
   --modal-bg-c: rgba(32, 35, 33, 0.7);
+  --dots-c: rgba(163, 165, 163, 0.4);
+  --dots-active-c: rgba(163, 165, 163);
 }
