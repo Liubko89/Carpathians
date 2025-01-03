@@ -123,7 +123,7 @@
   .tourDetailsWrapper {
     .listItem {
       .picture {
-        height: 70vh;
+        height: 75vh;
       }
 
       .activities {
@@ -149,9 +149,8 @@
     }
 
     .priceWrapper {
+      height: 24vh;
       padding: 40px 298px;
-      margin-top: 52px;
-
       .tourPrice {
         margin-bottom: 28px;
         font-size: 24px;

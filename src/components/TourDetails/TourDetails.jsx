@@ -9,7 +9,7 @@ const TourDetails = ({ tour, viewportWidth }) => {
         viewportWidth={viewportWidth}
         list={tour.moreDetails}
         slides={1}
-        hideArrows={viewportWidth >= 1440 ? false : true}
+        hideArrows
         appendCustomDots
       >
         {tour.moreDetails.map(
