@@ -2,7 +2,16 @@ import css from "./TourDetails.module.css";
 import SlickCarousel from "../SlickCarousel/SlickCarousel";
 import { nanoid } from "nanoid";
 
-const TourDetails = ({ tour, viewportWidth }) => {
+const TourDetails = ({
+  tour,
+  viewportWidth,
+  openBookTourModal,
+  closeModal,
+}) => {
+  const handlClick = () => {
+    closeModal();
+    openBookTourModal();
+  };
   return (
     <div className={css.tourDetailsWrapper}>
       <SlickCarousel
@@ -64,7 +73,7 @@ const TourDetails = ({ tour, viewportWidth }) => {
         <p className={css.tourPrice}>
           <span className={css.currency}>uah</span> {tour.price}/person
         </p>
-        <button className="btn" type="button">
+        <button className="btn" type="button" onClick={handlClick}>
           book a tour
         </button>
       </div>

@@ -8,7 +8,12 @@ import MoreDetailsModal from "../MoreDetailsModal/MoreDetailsModal";
 import { useState } from "react";
 import TourDetails from "../TourDetails/TourDetails";
 
-const UpcomingTours = ({ blockScrolling, allowScrolling, viewportWidth }) => {
+const UpcomingTours = ({
+  blockScrolling,
+  allowScrolling,
+  viewportWidth,
+  openBookTourModal,
+}) => {
   const [showModal, setShowModal] = useState(false);
   const [chosenTourId, setChosenTourId] = useState(null);
   const chooseTour = (id) => setChosenTourId(id);
@@ -42,7 +47,12 @@ const UpcomingTours = ({ blockScrolling, allowScrolling, viewportWidth }) => {
       </SlickCarousel>
       {showModal && (
         <MoreDetailsModal closeModal={closeModal}>
-          <TourDetails tour={tour} viewportWidth={viewportWidth} />
+          <TourDetails
+            closeModal={closeModal}
+            tour={tour}
+            viewportWidth={viewportWidth}
+            openBookTourModal={openBookTourModal}
+          />
         </MoreDetailsModal>
       )}
     </section>

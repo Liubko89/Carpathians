@@ -1,21 +1,9 @@
 import css from "./Hero.module.css";
-import { useState } from "react";
 import ModalBookTour from "../ModalBookTour/ModalBookTour";
-import BookATour from "../BookATour/BookATour";
 import clsx from "clsx";
 import { useEffect } from "react";
 
-const Hero = ({ blockScrolling, allowScrolling }) => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => {
-    setModalIsOpen(true);
-    blockScrolling();
-  };
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
-
+const Hero = ({ allowScrolling, openModal, closeModal, modalIsOpen }) => {
   useEffect(() => {
     if (!modalIsOpen) {
       allowScrolling();
@@ -37,9 +25,7 @@ const Hero = ({ blockScrolling, allowScrolling }) => {
         Book a tour
       </button>
 
-      <ModalBookTour closeModal={closeModal} modalIsOpen={modalIsOpen}>
-        <BookATour closeModal={closeModal} />
-      </ModalBookTour>
+      <ModalBookTour closeModal={closeModal} modalIsOpen={modalIsOpen} />
     </section>
   );
 };

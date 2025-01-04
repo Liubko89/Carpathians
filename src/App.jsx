@@ -16,9 +16,18 @@ function App() {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [scrolledFromTop, setScrolledFromTop] = useState(window.scrollY);
   const [preventScrolling, setPreventScrolling] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const blockScrolling = () => setPreventScrolling(true);
   const allowScrolling = () => setPreventScrolling(false);
+
+  const openBookTourModal = () => {
+    setModalIsOpen(true);
+    blockScrolling();
+  };
+  const closeBookTourModal = () => {
+    setModalIsOpen(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,7 +68,9 @@ function App() {
       <main>
         <Container heroWrapper>
           <Hero
-            blockScrolling={blockScrolling}
+            openModal={openBookTourModal}
+            closeModal={closeBookTourModal}
+            modalIsOpen={modalIsOpen}
             allowScrolling={allowScrolling}
           />
         </Container>
@@ -67,6 +78,7 @@ function App() {
           <AboutUs />
           <OurAdvantages />
           <UpcomingTours
+            openBookTourModal={openBookTourModal}
             blockScrolling={blockScrolling}
             allowScrolling={allowScrolling}
             viewportWidth={viewportWidth}
