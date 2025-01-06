@@ -1,5 +1,4 @@
 import css from "./ModalWrapper.module.css";
-import icons from "../../assets/icons.svg";
 import { useCallback, useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import CloseButton from "../CloseButton/CloseButton";

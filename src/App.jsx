@@ -17,6 +17,17 @@ function App() {
   const [scrolledFromTop, setScrolledFromTop] = useState(window.scrollY);
   const [preventScrolling, setPreventScrolling] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [checkedTours, setCheckedTours] = useState([]);
+
+  const handleCheckboxChange = (event) => {
+    const { value } = event.target;
+    if (checkedTours.includes(value)) {
+      setCheckedTours(checkedTours.filter((item) => item !== value));
+    } else {
+      setCheckedTours([...checkedTours, value]);
+    }
+  };
+  const checkTour = (tour) => setCheckedTours([tour]);
 
   const blockScrolling = () => setPreventScrolling(true);
   const allowScrolling = () => setPreventScrolling(false);
@@ -26,6 +37,7 @@ function App() {
     blockScrolling();
   };
   const closeBookTourModal = () => {
+    setCheckedTours([]);
     setModalIsOpen(false);
   };
 
@@ -72,6 +84,8 @@ function App() {
             closeModal={closeBookTourModal}
             modalIsOpen={modalIsOpen}
             allowScrolling={allowScrolling}
+            checkedTours={checkedTours}
+            handleCheckboxChange={handleCheckboxChange}
           />
         </Container>
         <Container>
@@ -82,6 +96,7 @@ function App() {
             blockScrolling={blockScrolling}
             allowScrolling={allowScrolling}
             viewportWidth={viewportWidth}
+            checkTour={checkTour}
           />
           <Reviews viewportWidth={viewportWidth} />
           <Gallery viewportWidth={viewportWidth} />

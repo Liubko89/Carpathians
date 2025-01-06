@@ -7,8 +7,10 @@ const TourDetails = ({
   viewportWidth,
   openBookTourModal,
   closeModal,
+  checkTour,
 }) => {
   const handlClick = () => {
+    checkTour(tour.name);
     closeModal();
     openBookTourModal();
   };

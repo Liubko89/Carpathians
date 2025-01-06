@@ -5,14 +5,15 @@ import { validationSchema } from "../../helpers/schema";
 import clsx from "clsx";
 import CloseButton from "../CloseButton/CloseButton";
 
-const BookATour = ({ closeModal }) => {
+const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
   const initialValues = {
     name: "",
     phoneNumber: "",
-    typeOfTour: [],
+    tours: [],
   };
 
   const handleSubmit = (values, actions) => {
+    values.tours = checkedTours;
     console.log(values);
     actions.resetForm();
     closeModal();
@@ -65,8 +66,10 @@ const BookATour = ({ closeModal }) => {
               <Field
                 className={clsx(css.visuallyHidden, css.checkbox)}
                 type="checkbox"
-                name="typeOfTour"
+                name="tours"
                 value="Ascent to Hoverla"
+                checked={checkedTours.includes("Ascent to Hoverla")}
+                onChange={handleCheckboxChange}
               />
               <span className={css.customCheckbox}>
                 <svg className={css.checkboxIcon} width="20" height="20">
@@ -79,8 +82,10 @@ const BookATour = ({ closeModal }) => {
               <Field
                 className={clsx(css.visuallyHidden, css.checkbox)}
                 type="checkbox"
-                name="typeOfTour"
+                name="tours"
                 value="Ski tour to Bukovel"
+                checked={checkedTours.includes("Ski tour to Bukovel")}
+                onChange={handleCheckboxChange}
               />
               <span className={css.customCheckbox}>
                 <svg className={css.checkboxIcon} width="20" height="20">
@@ -93,8 +98,10 @@ const BookATour = ({ closeModal }) => {
               <Field
                 className={clsx(css.visuallyHidden, css.checkbox)}
                 type="checkbox"
-                name="typeOfTour"
+                name="tours"
                 value="Week in Carpathians"
+                checked={checkedTours.includes("Week in Carpathians")}
+                onChange={handleCheckboxChange}
               />
               <span className={css.customCheckbox}>
                 <svg className={css.checkboxIcon} width="20" height="20">

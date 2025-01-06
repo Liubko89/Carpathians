@@ -13,6 +13,7 @@ const UpcomingTours = ({
   allowScrolling,
   viewportWidth,
   openBookTourModal,
+  checkTour,
 }) => {
   const [showModal, setShowModal] = useState(false);
   const [chosenTourId, setChosenTourId] = useState(null);
@@ -52,6 +53,7 @@ const UpcomingTours = ({
             tour={tour}
             viewportWidth={viewportWidth}
             openBookTourModal={openBookTourModal}
+            checkTour={checkTour}
           />
         </MoreDetailsModal>
       )}

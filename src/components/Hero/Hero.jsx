@@ -3,7 +3,14 @@ import ModalBookTour from "../ModalBookTour/ModalBookTour";
 import clsx from "clsx";
 import { useEffect } from "react";
 
-const Hero = ({ allowScrolling, openModal, closeModal, modalIsOpen }) => {
+const Hero = ({
+  allowScrolling,
+  openModal,
+  closeModal,
+  modalIsOpen,
+  checkedTours,
+  handleCheckboxChange,
+}) => {
   useEffect(() => {
     if (!modalIsOpen) {
       allowScrolling();
@@ -25,7 +32,12 @@ const Hero = ({ allowScrolling, openModal, closeModal, modalIsOpen }) => {
         Book a tour
       </button>
 
-      <ModalBookTour closeModal={closeModal} modalIsOpen={modalIsOpen} />
+      <ModalBookTour
+        closeModal={closeModal}
+        modalIsOpen={modalIsOpen}
+        checkedTours={checkedTours}
+        handleCheckboxChange={handleCheckboxChange}
+      />
     </section>
   );
 };

@@ -3,7 +3,12 @@ import { useEffect, useRef } from "react";
 import clsx from "clsx";
 import BookATour from "../BookATour/BookATour";
 
-const ModalBookTour = ({ closeModal, modalIsOpen }) => {
+const ModalBookTour = ({
+  closeModal,
+  modalIsOpen,
+  checkedTours,
+  handleCheckboxChange,
+}) => {
   const modalWrapperRef = useRef(null);
   const modalRef = useRef(null);
 
@@ -41,7 +46,11 @@ const ModalBookTour = ({ closeModal, modalIsOpen }) => {
       onKeyDown={handleEscape}
     >
       <div className={css.modal} ref={modalRef}>
-        <BookATour closeModal={closeModal} />
+        <BookATour
+          closeModal={closeModal}
+          checkedTours={checkedTours}
+          handleCheckboxChange={handleCheckboxChange}
+        />
       </div>
     </div>
   );
