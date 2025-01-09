@@ -32,11 +32,6 @@
   .icon {
     pointer-events: none;
     fill: var(--main-c);
-    transition: scale 250ms ease-in-out;
-  }
-
-  &:hover,
-  &:active > .icon {
-    scale: 1.1;
+    transition: all 250ms ease-in-out;
   }
 }

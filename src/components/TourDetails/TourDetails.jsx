@@ -35,9 +35,18 @@ const TourDetails = ({
             bgImageDesk2x,
             activities,
           }) => {
+            const image = (bool) => {
+              if (viewportWidth <= 768) {
+                return bool ? bgImage : bgImage2x;
+              } else if (viewportWidth >= 768 && viewportWidth < 1440) {
+                return bool ? bgImageTab : bgImageTab2x;
+              } else {
+                return bool ? bgImageDesk : bgImageDesk2x;
+              }
+            };
             return (
               <li className={css.listItem} key={day}>
-                <picture className={css.picture}>
+                {/* <picture className={css.picture}>
                   <source
                     media="(min-width: 1440px)"
                     srcSet={`${bgImageDesk} 1x, ${bgImageDesk2x} 2x`}
@@ -51,9 +60,19 @@ const TourDetails = ({
                     srcSet={`${bgImage} 1x, ${bgImage2x} 2x`}
                   />
                   <img className={css.image} src={bgImage} alt={tour.alt} />
-                </picture>
+                </picture> */}
 
-                <div className={css.activities}>
+                <div
+                  className={css.activities}
+                  style={{
+                    backgroundImage: `image-set(url(${image(
+                      true
+                    )}) 1x, url(${image(false)}) 2x)`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                  }}
+                >
                   <h3 className={css.tourTitle}>{tour.name}</h3>
                   <p className={css.tourDay}>{day}</p>
                   <ul className={css.activitiesList}>

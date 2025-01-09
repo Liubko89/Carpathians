@@ -21,10 +21,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: scale 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 
     &:hover {
-      scale: 1.25;
+      transform: scale(1.2) translateY(-40%);
     }
 
     .icon {

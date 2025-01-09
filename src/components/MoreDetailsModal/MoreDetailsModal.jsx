@@ -20,7 +20,7 @@ const MoreDetailsModal = ({ children, closeModal }) => {
       className={css.modal}
       ref={modalRef}
       onKeyDown={handleKeyDown}
-      tabIndex="-1"
+      tabIndex="0"
     >
       <CloseButton closeModal={closeModal} color="iconLight" />
       {children}

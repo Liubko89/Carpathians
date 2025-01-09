@@ -13,6 +13,7 @@ body {
   line-height: 1.22;
   color: var(--primary-text-c);
   background-color: var(--light-c);
+  height: 100%;
 }
 
 .preventScrolling {

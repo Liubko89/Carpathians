@@ -22,7 +22,10 @@
 
     .content {
       padding: 204px 35px 48px;
-      background-image: url(../../assets/img/mob1x/Review_mobile.jpg);
+      background-image: image-set(
+        "../../assets/img/mob1x/Review_mobile.jpg" 1x,
+        "../../assets/img/mob2x/Review_mobile_2x.jpg" 2x
+      );
       background-position: top center;
       background-size: 100% 134px;
       background-repeat: no-repeat;
@@ -45,12 +48,6 @@
       }
     }
 
-    @media screen and (min-resolution: 192dpi) {
-      .content {
-        background-image: url(../../assets/img/mob2x/Review_mobile_2x.jpg);
-      }
-    }
-
     .btn {
       position: absolute;
       bottom: 0;
@@ -69,7 +66,7 @@
 
       &:hover,
       &:focus {
-        scale: 1.1;
+        transform: scale(1.1);
       }
 
       .icon {
@@ -118,7 +115,10 @@
     .wrapper {
       .content {
         padding: 208px 20px 48px;
-        background-image: url(../../assets/img/tab1x/Review_tablet.jpg);
+        background-image: image-set(
+          "../../assets/img/tab1x/Review_tablet.jpg" 1x,
+          "../../assets/img/tab2x/Review_tablet_2x.jpg" 2x
+        );
 
         .listTitle {
           font-size: 24px;
@@ -127,12 +127,6 @@
 
         .descr {
           font-size: 20px;
-        }
-      }
-
-      @media screen and (min-resolution: 192dpi) {
-        .content {
-          background-image: url(../../assets/img/tab2x/Review_tablet_2x.jpg);
         }
       }
     }
@@ -146,16 +140,13 @@
     .wrapper {
       .content {
         padding: 217px 28px 48px;
-        background-image: url(../../assets/img/desk1x/Review_desk-min.jpg);
+        background-image: image-set(
+          "../../assets/img/desk1x/Review_desk-min.jpg" 1x,
+          "../../assets/img/desk2x/Review_desk_2x.jpg" 2x
+        );
 
         .listTitle {
           font-size: 28px;
-        }
-      }
-
-      @media screen and (min-resolution: 192dpi) {
-        .content {
-          background-image: url(../../assets/img/desk2x/Review_desk_2x.jpg);
         }
       }
     }

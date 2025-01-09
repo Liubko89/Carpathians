@@ -5,10 +5,10 @@
   transform: translateY(-50%);
   z-index: 2;
   fill: var(--light-c);
-  transition: scale 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 
   &:hover {
-    scale: 1.2;
+    transform: scale(1.2) translateY(-40%);
   }
 
   .logoIcon {

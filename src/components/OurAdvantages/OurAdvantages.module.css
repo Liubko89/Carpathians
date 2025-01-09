@@ -2,16 +2,13 @@
   .list {
     padding: 87px 0;
     background-color: var(--spare-bg);
-    background-image: url(../../assets/img/mob1x/Advantages-min.jpg);
+    background-image: image-set(
+      "../../assets/img/mob1x/Advantages-min.jpg" 1x,
+      "../../assets/img/mob2x/Advantages_2x.jpg" 2x
+    );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  @media screen and (min-resolution: 192dpi) {
-    .list {
-      background-image: url(../../assets/img/mob2x/Advantages_2x.jpg);
-    }
   }
 }
 

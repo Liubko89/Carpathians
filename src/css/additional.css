@@ -35,10 +35,10 @@
   height: 40px;
   border: none;
   background-color: transparent;
-  transition: scale 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 
   &:hover {
-    scale: 1.25;
+    transform: scale(1.25);
   }
 
   .iconDark {
