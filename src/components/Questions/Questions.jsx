@@ -1,11 +1,12 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import css from "./Questions.module.css";
 import { validationSchema } from "../../helpers/schema";
+import { notify } from "../../helpers/notification";
 
 const Questions = () => {
   const initialValues = { name: "", phoneNumber: "", question: "" };
   const handleSubmit = (values, actions) => {
-    console.log(values);
+    notify(values);
     actions.resetForm();
   };
   return (

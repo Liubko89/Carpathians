@@ -4,6 +4,7 @@ import icons from "../../assets/icons.svg";
 import { validationSchema } from "../../helpers/schema";
 import clsx from "clsx";
 import CloseButton from "../CloseButton/CloseButton";
+import { notify } from "../../helpers/notification";
 
 const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
   const initialValues = {
@@ -14,7 +15,7 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
 
   const handleSubmit = (values, actions) => {
     values.tours = checkedTours;
-    console.log(values);
+    notify(values);
     actions.resetForm();
     closeModal();
   };

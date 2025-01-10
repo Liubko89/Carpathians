@@ -10,6 +10,7 @@ import UpcomingTours from "./components/UpcomingTours/UpcomingTours";
 import Container from "./components/Container/Container";
 import { useEffect, useState } from "react";
 import ScrollToTopBtn from "./components/ScrollToTopBtn/ScrollToTopBtn";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
@@ -111,6 +112,7 @@ function App() {
       {scrolledFromTop > viewportHeight && !preventScrolling && (
         <ScrollToTopBtn />
       )}
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
 }
