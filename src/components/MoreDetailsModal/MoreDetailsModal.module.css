@@ -6,6 +6,19 @@
   width: 100%;
   max-width: 316px;
   overflow: auto;
+  background-color: var(--light-c);
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--modal-bg-c);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--main-c);
+    border-radius: 8px;
+  }
 }
 
 @media screen and (max-width: 375px) {

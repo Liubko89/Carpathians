@@ -1,17 +1,31 @@
 .tourDetailsWrapper {
   background-color: var(--light-c);
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
 
   .listItem {
     width: 100%;
 
     .activities {
-      height: 75vh;
+      height: 70vh;
       color: var(--light-c);
       padding: 56px 48px 56px 0;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: var(--modal-bg-c);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--main-c);
+        border-radius: 8px;
+      }
 
       .tourTitle {
         padding-left: 48px;
@@ -45,7 +59,7 @@
 
   .priceWrapper {
     background-color: var(--light-c);
-    padding: 0 16px 16px 16px;
+    padding: 16px;
 
     .tourPrice {
       margin: 0 auto 16px auto;
@@ -93,7 +107,7 @@
     }
 
     .priceWrapper {
-      padding: 0 166px 24px 166px;
+      padding: 24px 166px;
 
       .tourPrice {
         margin-bottom: 24px;
@@ -107,8 +121,8 @@
   .tourDetailsWrapper {
     .listItem {
       .activities {
-        padding-top: 108px;
-        padding-bottom: 108px;
+        padding-top: 80px;
+        padding-bottom: 80px;
 
         .tourTitle {
           padding-left: 100px;
@@ -130,11 +144,18 @@
     }
 
     .priceWrapper {
-      padding: 0 298px 24px 298px;
+      padding: 40px 298px;
       .tourPrice {
         margin-bottom: 28px;
         font-size: 24px;
       }
     }
+  }
+}
+
+@media screen and (max-height: 758px) and (min-width: 1440px) {
+  .activities {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }

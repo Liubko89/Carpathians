@@ -1,19 +1,20 @@
 .btn {
   position: fixed;
-  bottom: 60px;
-  right: 60px;
+  bottom: 40px;
+  right: 40px;
   border-radius: 50%;
   width: 64px;
   height: 64px;
-  border: 1px solid var(--main-c);
-  background-color: transparent;
+  border: none;
+  background-color: var(--modal-bg-c);
   cursor: pointer;
-  transition: 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
   transform: rotate(90deg);
 
+  &:active,
   &:hover {
     border: 2px solid transparent;
     background: linear-gradient(var(--light-c), var(--light-c)) padding-box,
@@ -33,5 +34,12 @@
     pointer-events: none;
     fill: var(--main-c);
     transition: all 250ms ease-in-out;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    bottom: 16px;
+    right: 16px;
   }
 }
