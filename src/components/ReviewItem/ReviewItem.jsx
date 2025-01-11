@@ -21,6 +21,8 @@ const ReviewItem = ({
   textReview,
 }) => {
   const [overlay, setOverlay] = useState(false);
+  const handleClick = setOverlay(!overlay);
+
   return (
     <li className={css.listItem}>
       <div className={css.wrapper}>
@@ -49,7 +51,11 @@ const ReviewItem = ({
           <h3 className={css.listTitle}>{name}</h3>
           <p className={css.descr}>{textReview}</p>
         </div>
-        <button className={css.btn} onClick={() => setOverlay(!overlay)}>
+        <button
+          className={css.btn}
+          onClick={handleClick}
+          aria-label="Show Photo"
+        >
           <svg className={css.icon} width="26" height="16">
             <use href={`${icons}#icon-round`}></use>
           </svg>

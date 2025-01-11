@@ -21,7 +21,11 @@ const Header = ({ viewportWidth, blockScrolling, allowScrolling }) => {
     <header className={css.header}>
       <Logo />
       {!modalIsOpen && viewportWidth < 1440 && (
-        <button className={css.button} onClick={openModal}>
+        <button
+          className={css.button}
+          onClick={openModal}
+          aria-label="navigation menu button"
+        >
           <svg className={css.icon} width="28" height="15">
             <use href={`${icon}#icon-menu`}></use>
           </svg>

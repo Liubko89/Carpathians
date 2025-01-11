@@ -7,6 +7,7 @@ import SlickCarousel from "../SlickCarousel/SlickCarousel";
 import MoreDetailsModal from "../MoreDetailsModal/MoreDetailsModal";
 import { useState } from "react";
 import TourDetails from "../TourDetails/TourDetails";
+import LazyLoad from "react-lazyload";
 
 const UpcomingTours = ({
   blockScrolling,
@@ -32,20 +33,21 @@ const UpcomingTours = ({
   return (
     <section className={css.section} id="tours">
       <h2 className="titleH2">Upcoming tours</h2>
-
-      <SlickCarousel viewportWidth={viewportWidth} list={tours}>
-        {tours.map((tour) => {
-          return (
-            <li key={tour.id}>
-              <UpcomingTour
-                openModal={openModal}
-                tour={tour}
-                chooseTour={chooseTour}
-              />
-            </li>
-          );
-        })}
-      </SlickCarousel>
+      <LazyLoad height={200} offset={100}>
+        <SlickCarousel viewportWidth={viewportWidth} list={tours}>
+          {tours.map((tour) => {
+            return (
+              <li key={tour.id}>
+                <UpcomingTour
+                  openModal={openModal}
+                  tour={tour}
+                  chooseTour={chooseTour}
+                />
+              </li>
+            );
+          })}
+        </SlickCarousel>
+      </LazyLoad>
       {showModal && (
         <MoreDetailsModal closeModal={closeModal}>
           <TourDetails

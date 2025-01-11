@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 import SliderArrow from "../SliderArrow/SliderArrow";
-import TourDetailsSliderArrowPrev from "../TourDetailsSliderArrow/TourDetailsSliderArrowPrev";
-import TourDetailsSliderArrowNext from "../TourDetailsSliderArrow/TourDetailsSliderArrowNext";
+import TourDetailsSliderArrow from "../TourDetailsSliderArrow/TourDetailsSliderArrow";
 
 const SlickCarousel = ({
   viewportWidth,
@@ -32,7 +31,7 @@ const SlickCarousel = ({
     prevArrow: !insideArrows ? (
       <SliderArrow direction="prev" />
     ) : (
-      <TourDetailsSliderArrowPrev />
+      <TourDetailsSliderArrow direction="prev" />
     ),
     nextArrow: !insideArrows ? (
       <SliderArrow
@@ -40,7 +39,7 @@ const SlickCarousel = ({
         listLength={list.length - (slides ? slides : handleSlides())}
       />
     ) : (
-      <TourDetailsSliderArrowNext />
+      <TourDetailsSliderArrow direction="next" />
     ),
   };
 
