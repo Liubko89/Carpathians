@@ -21,7 +21,9 @@ const ReviewItem = ({
   textReview,
 }) => {
   const [overlay, setOverlay] = useState(false);
-  const handleClick = setOverlay(!overlay);
+  const handleClick = () => {
+    setOverlay(!overlay);
+  };
 
   return (
     <li className={css.listItem}>
