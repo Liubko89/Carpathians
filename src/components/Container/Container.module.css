@@ -15,8 +15,8 @@
   padding: 188px 30px 193px;
   background-color: var(--spare-bg);
   background-image: image-set(
-    "../../assets/img/mob1x/hero_desk_1920-min.jpg" 1x,
-    "../../assets/img/mob2x/hero_desk_1920_2x.jpg" 2x
+    "../../assets/img/mob1x/hero_min.jpg" 1x,
+    "../../assets/img/mob2x/hero_2x.jpg" 2x
   );
   background-position: center;
   background-repeat: no-repeat;

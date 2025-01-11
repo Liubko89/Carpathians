@@ -1,16 +1,25 @@
 .section {
   margin-bottom: 104px;
+  min-height: 540px;
+}
+
+@media screen and (min-width: 375px) {
+  .section {
+    min-height: 572px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .section {
     margin-bottom: 144px;
+    min-height: 620px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .section {
     margin-bottom: 80px;
+    min-height: 760px;
 
     .list {
       display: flex;

@@ -7,6 +7,7 @@ const CloseButton = ({ closeModal, color, className1 }) => {
       className={clsx(className1, "closeBtn")}
       onClick={closeModal}
       type="button"
+      aria-label="Close window"
     >
       <svg className={color} width="40" height="40">
         <use href={`${icons}#icon-close`}></use>

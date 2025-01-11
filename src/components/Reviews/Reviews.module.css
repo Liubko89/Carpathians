@@ -5,11 +5,37 @@
   }
 }
 
+@media screen and (max-width: 340px) {
+  .section {
+    min-height: 1020px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .section {
+    min-height: 980px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .section {
+    min-height: 960px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section {
+    min-height: 608px;
+
     .list {
       flex-direction: row;
       justify-content: space-around;
     }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    min-height: 660px;
   }
 }

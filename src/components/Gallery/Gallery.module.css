@@ -3,8 +3,21 @@
   min-height: 440px;
 }
 
+@media screen and (max-width: 340px) {
+  .section {
+    min-height: 548px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .section {
+    min-height: 608px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .section {
+    min-height: 460px;
     padding-bottom: 144px;
   }
 }
