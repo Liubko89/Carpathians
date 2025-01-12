@@ -15,8 +15,8 @@
   padding: 188px 30px 193px;
   background-color: var(--spare-bg);
   background-image: image-set(
-    "../../assets/img/mob1x/hero_min.jpg" 1x,
-    "../../assets/img/mob2x/hero_2x.jpg" 2x
+    "../../assets/img/mob1x/hero_min.webp" 1x,
+    "../../assets/img/mob2x/hero_2x.webp" 2x
   );
   background-position: center;
   background-repeat: no-repeat;
@@ -37,8 +37,8 @@
     padding: 180px 20px 185px;
     margin-bottom: 80px;
     background-image: image-set(
-      "../../assets/img/tab1x/hero_tab.jpg" 1x,
-      "../../assets/img/tab2x/hero_tab_2x.jpg" 2x
+      "../../assets/img/tab1x/hero_tab.webp" 1x,
+      "../../assets/img/tab2x/hero_tab_2x.webp" 2x
     );
   }
 }
@@ -57,8 +57,8 @@
   .heroWrapper {
     padding: 258px 135px 266px;
     background-image: image-set(
-      "../../assets/img/desk1x/hero_desk_1920-1_desk.jpg" 1x,
-      "../../assets/img/desk2x/hero_desk_1920-1_desk_2x.jpg" 2x
+      "../../assets/img/desk1x/hero_desk_1920-1.webp" 1x,
+      "../../assets/img/desk2x/hero_desk_1920-1_desk_2x.webp" 2x
     );
   }
 }
@@ -71,8 +71,8 @@
 
   .heroWrapper {
     background-image: image-set(
-      "../../assets/img/desk1x/hero_desk_1920_desk.jpg" 1x,
-      "../../assets/img/desk2x/hero_desk_1920_desk_2x.jpg" 2x
+      "../../assets/img/desk1x/hero_desk_1920.webp" 1x,
+      "../../assets/img/desk2x/hero_desk_1920_desk_2x.webp" 2x
     );
   }
 }

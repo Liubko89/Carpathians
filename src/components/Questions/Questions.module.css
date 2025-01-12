@@ -2,8 +2,8 @@
   padding: 116px 32px;
   background-color: var(--spare-bg);
   background-image: image-set(
-    "../../assets/img/mob1x/image_3_desk-min.jpg" 1x,
-    "../../assets/img/mob2x/image_3_desk_2x.jpg" 2x
+    "../../assets/img/mob1x/image_3_min.webp" 1x,
+    "../../assets/img/mob2x/image_3_2x.webp" 2x
   );
   background-position: center;
   background-repeat: no-repeat;
@@ -111,8 +111,8 @@
   .section {
     padding: 88px 145px;
     background-image: image-set(
-      "../../assets/img/tab1x/image_3_tablet.jpg" 1x,
-      "../../assets/img/tab2x/image_3_tablet_2x.jpg" 2x
+      "../../assets/img/tab1x/image_3_tablet.webp" 1x,
+      "../../assets/img/tab2x/image_3_tablet_2x.webp" 2x
     );
 
     .wrapper {
@@ -159,8 +159,8 @@
   .section {
     padding: 244px 0;
     background-image: image-set(
-      "../../assets/img/desk1x/image_3_desk_desk.jpg" 1x,
-      "../../assets/img/desk2x/image_3_desk_desk_2x.jpg" 2x
+      "../../assets/img/desk1x/image_3_desk.webp" 1x,
+      "../../assets/img/desk2x/image_3_desk_2x.webp" 2x
     );
 
     .wrapper {
