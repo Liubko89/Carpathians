@@ -7,6 +7,7 @@ import "./css/fonts.css";
 import "./css/variables.css";
 import "./css/index.css";
 import "./css/additional.css";
+import "./utils/i18n/index.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

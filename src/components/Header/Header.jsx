@@ -5,6 +5,7 @@ import ModalWrapper from "../ModalWrapper/ModalWrapper";
 import { useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
 const Header = ({ viewportWidth, blockScrolling, allowScrolling }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -20,6 +21,7 @@ const Header = ({ viewportWidth, blockScrolling, allowScrolling }) => {
   return (
     <header className={css.header}>
       <Logo />
+      <LanguageSelector />
       {!modalIsOpen && viewportWidth < 1440 && (
         <button
           className={css.button}
