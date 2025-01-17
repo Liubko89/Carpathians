@@ -7,6 +7,7 @@
   max-width: 316px;
   overflow: auto;
   background-color: var(--light-c);
+  align-content: center;
   &::-webkit-scrollbar {
     width: 6px;
   }

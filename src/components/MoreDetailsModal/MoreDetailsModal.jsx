@@ -1,5 +1,4 @@
 import css from "./MoreDetailsModal.module.css";
-import CloseButton from "../CloseButton/CloseButton";
 import { useRef } from "react";
 import { useEffect } from "react";
 
@@ -22,7 +21,6 @@ const MoreDetailsModal = ({ children, closeModal }) => {
       onKeyDown={handleKeyDown}
       tabIndex="0"
     >
-      <CloseButton closeModal={closeModal} color="iconLight" />
       {children}
     </div>
   );

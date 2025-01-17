@@ -1,6 +1,7 @@
 import css from "./TourDetails.module.css";
 import SlickCarousel from "../SlickCarousel/SlickCarousel";
 import { nanoid } from "nanoid";
+import CloseButton from "../CloseButton/CloseButton";
 
 const TourDetails = ({
   tour,
@@ -16,6 +17,7 @@ const TourDetails = ({
   };
   return (
     <div className={css.tourDetailsWrapper}>
+      <CloseButton closeModal={closeModal} color="iconLight" />
       <SlickCarousel
         viewportWidth={viewportWidth}
         list={tour.moreDetails}
