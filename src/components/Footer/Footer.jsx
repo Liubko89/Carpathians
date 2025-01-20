@@ -20,7 +20,7 @@ const Footer = () => {
             <svg className={css.icon} width="19" height="27">
               <use href={`${icons}#icon-place`}></use>
             </svg>
-            <p className={css.linkDescr}>Lviv, st Dorosheko, 44 k</p>
+            <p className={css.linkDescr}>Lviv, {t("st")} Dorosheko, 44 k</p>
           </a>
         </li>
         <li className={css.contact}>
@@ -51,7 +51,7 @@ const Footer = () => {
         <svg className={css.copyRightIcon} width="16" height="16">
           <use href={`${icons}#icon-copyright`}></use>
         </svg>
-        <p className={css.copyRightDescription}>Created by LelekaSoft</p>
+        <p className={css.copyRightDescription}>{t("createdBy")}</p>
       </div>
     </footer>
   );
