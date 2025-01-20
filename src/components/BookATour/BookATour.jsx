@@ -5,8 +5,11 @@ import { validationSchema } from "../../helpers/schema";
 import clsx from "clsx";
 import CloseButton from "../CloseButton/CloseButton";
 import { notify } from "../../helpers/notification";
+import { useTranslation } from "react-i18next";
 
 const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
+  const { t } = useTranslation();
+
   const initialValues = {
     name: "",
     phoneNumber: "",
@@ -19,13 +22,11 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
     actions.resetForm();
     closeModal();
   };
+
   return (
     <div className={css.wrapper}>
-      <h2 className={css.title}>Book a tour</h2>
-      <p className={css.description}>
-        You can leave your application here and our manager will call you within
-        10 minutes
-      </p>
+      <h2 className={css.title}>{t("bookATour")}</h2>
+      <p className={css.description}>{t("modalBookATourMessage")}</p>
 
       <Formik
         initialValues={initialValues}
@@ -38,7 +39,7 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
               className={css.input}
               name="name"
               type="text"
-              placeholder="Your name*"
+              placeholder={t("bookingForm.name")}
             />
             <ErrorMessage className={css.error} name="name" component="span" />
           </div>
@@ -47,7 +48,7 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
               className={css.input}
               name="phoneNumber"
               type="text"
-              placeholder="Phone number*"
+              placeholder={t("bookingForm.number")}
             />
             <ErrorMessage
               className={css.error}
@@ -77,7 +78,7 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
                   <use href={`${icons}#icon-checkmark-outline`}></use>
                 </svg>
               </span>
-              Ascent to Hoverla
+              {t("tours.ascentToHoverla")}
             </label>
             <label className={css.label}>
               <Field
@@ -93,7 +94,7 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
                   <use href={`${icons}#icon-checkmark-outline`}></use>
                 </svg>
               </span>
-              Ski tour to Bukovel
+              {t("tours.skiTourToBukovel")}
             </label>
             <label className={css.label}>
               <Field
@@ -109,12 +110,12 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
                   <use href={`${icons}#icon-checkmark-outline`}></use>
                 </svg>
               </span>
-              Week in Carpathians
+              {t("tours.weekInCarpathians")}
             </label>
           </div>
 
           <button className="btn" type="submit">
-            Call Me
+            {t("callMe")}
           </button>
         </Form>
       </Formik>

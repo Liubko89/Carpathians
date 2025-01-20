@@ -6,8 +6,10 @@ import SlickCarousel from "../SlickCarousel/SlickCarousel.jsx";
 import { useEffect } from "react";
 import { useState } from "react";
 import LazyLoad from "react-lazyload";
+import { useTranslation } from "react-i18next";
 
 const Gallery = ({ viewportWidth }) => {
+  const { t } = useTranslation();
   const [slides, setSlides] = useState(null);
 
   useEffect(() => {
@@ -19,7 +21,7 @@ const Gallery = ({ viewportWidth }) => {
 
   return (
     <section className={css.section} id="gallery">
-      <h2 className="titleH2">Gallery</h2>
+      <h2 className="titleH2">{t("nav.gallery")}</h2>
       <LazyLoad height={200} offset={100} scroll={true}>
         <SlickCarousel
           viewportWidth={viewportWidth}

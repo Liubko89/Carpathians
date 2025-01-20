@@ -2,8 +2,10 @@ import css from "./Questions.module.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { validationSchema } from "../../helpers/schema";
 import { notify } from "../../helpers/notification";
+import { useTranslation } from "react-i18next";
 
 const Questions = () => {
+  const { t } = useTranslation();
   const initialValues = { name: "", phoneNumber: "", question: "" };
   const handleSubmit = (values, actions) => {
     notify(values);
@@ -12,11 +14,8 @@ const Questions = () => {
   return (
     <section className={css.section}>
       <div className={css.wrapper}>
-        <h2 className={css.title}>Do you have any questions?</h2>
-        <p className={css.descr}>
-          You can leave your questions here and our manager will call you back
-          within 10 minutes
-        </p>
+        <h2 className={css.title}>{t("questions.title")}</h2>
+        <p className={css.descr}>{t("questions.description")}</p>
         <Formik
           initialValues={initialValues}
           onSubmit={handleSubmit}
@@ -28,7 +27,7 @@ const Questions = () => {
                 className={css.input}
                 name="name"
                 type="text"
-                placeholder="Your name*"
+                placeholder={t("questions.form.name")}
               />
               <ErrorMessage
                 className={css.error}
@@ -41,7 +40,7 @@ const Questions = () => {
                 className={css.input}
                 name="phoneNumber"
                 type="text"
-                placeholder="Phone number*"
+                placeholder={t("questions.form.number")}
               />
               <ErrorMessage
                 className={css.error}
@@ -54,11 +53,11 @@ const Questions = () => {
                 className={css.textarea}
                 name="question"
                 as="textarea"
-                placeholder="What would you like to know?"
+                placeholder={t("questions.form.question")}
               />
             </div>
             <button className={css.btn} type="submit">
-              Call me
+              {t("callMe")}
             </button>
           </Form>
         </Formik>

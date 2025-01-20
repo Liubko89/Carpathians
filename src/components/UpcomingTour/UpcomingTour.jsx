@@ -25,7 +25,7 @@ const UpcomingTour = ({ openModal, tour, chooseTour }) => {
       </picture>
 
       <div className={css.descrWrapper}>
-        <h3 className={css.subTitle}>{name}</h3>
+        <h3 className={css.subTitle}>{tour.name}</h3>
         <p className={css.descr}>From UAH {tour.price}/person</p>
         <button className={css.btn} type="button" onClick={handleClick}>
           More Details

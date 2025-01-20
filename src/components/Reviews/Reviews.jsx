@@ -5,8 +5,10 @@ import clsx from "clsx";
 import { useState } from "react";
 import { useEffect } from "react";
 import LazyLoad from "react-lazyload";
+import { useTranslation } from "react-i18next";
 
 const Reviews = ({ viewportWidth }) => {
+  const { t } = useTranslation();
   const [renderList, setRenderList] = useState(reviews.slice(0, 2));
 
   useEffect(() => {
@@ -17,7 +19,7 @@ const Reviews = ({ viewportWidth }) => {
 
   return (
     <section className={clsx("section", css.section)} id="reviews">
-      <h2 className="titleH2">Reviews</h2>
+      <h2 className="titleH2">{t("nav.reviews")}</h2>
       <LazyLoad height={200} offset={100}>
         <ul className={css.list}>
           {renderList.map((review) => {

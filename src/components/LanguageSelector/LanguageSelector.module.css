@@ -18,7 +18,7 @@
     width: 100%;
     border: none;
     border-radius: 50%;
-    background-color: var(--main-c);
+    background-color: var(--dots-c);
     color: var(--light-c);
     text-transform: uppercase;
     font-weight: 500;

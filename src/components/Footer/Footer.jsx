@@ -2,11 +2,13 @@ import css from "./Footer.module.css";
 import icons from "../../assets/icons.svg";
 import SocialMediaLinks from "../SocialMediaLinks/SocialMediaLinks";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className={css.footer} id="contacts">
-      <h2 className={css.title}>Contacts</h2>
+      <h2 className={css.title}>{t("nav.contacts")}</h2>
 
       <ul className={css.contactsList}>
         <li className={css.contact}>

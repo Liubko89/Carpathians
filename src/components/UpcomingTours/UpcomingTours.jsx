@@ -8,6 +8,7 @@ import MoreDetailsModal from "../MoreDetailsModal/MoreDetailsModal";
 import { useState } from "react";
 import TourDetails from "../TourDetails/TourDetails";
 import LazyLoad from "react-lazyload";
+import { useTranslation } from "react-i18next";
 
 const UpcomingTours = ({
   blockScrolling,
@@ -16,6 +17,7 @@ const UpcomingTours = ({
   openBookTourModal,
   checkTour,
 }) => {
+  const { t } = useTranslation();
   const [showModal, setShowModal] = useState(false);
   const [chosenTourId, setChosenTourId] = useState(null);
   const chooseTour = (id) => setChosenTourId(id);
@@ -32,7 +34,7 @@ const UpcomingTours = ({
 
   return (
     <section className={css.section} id="tours">
-      <h2 className="titleH2">Upcoming tours</h2>
+      <h2 className="titleH2">{t("upcomingTours.title")}</h2>
       <LazyLoad height={200} offset={100}>
         <SlickCarousel viewportWidth={viewportWidth} list={tours}>
           {tours.map((tour) => {

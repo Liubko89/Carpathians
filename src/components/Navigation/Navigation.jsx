@@ -1,22 +1,25 @@
+import { useTranslation } from "react-i18next";
 import css from "./Navigation.module.css";
 
 const Navigation = ({ closeModal }) => {
+  const { t } = useTranslation();
+
   return (
     <nav className={css.navigation}>
       <a className={css.navItem} onClick={closeModal} href="/#aboutUs">
-        About us
+        {t("nav.aboutUs")}
       </a>
       <a className={css.navItem} onClick={closeModal} href="/#tours">
-        Tours
+        {t("nav.tours")}
       </a>
       <a className={css.navItem} onClick={closeModal} href="/#reviews">
-        Reviews
+        {t("nav.reviews")}
       </a>
       <a className={css.navItem} onClick={closeModal} href="/#gallery">
-        Gallery
+        {t("nav.gallery")}
       </a>
       <a className={css.navItem} onClick={closeModal} href="/#contacts">
-        Contacts
+        {t("nav.contacts")}
       </a>
     </nav>
   );

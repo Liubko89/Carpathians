@@ -19,7 +19,7 @@
       content: "";
       display: block;
       width: 100%;
-      height: 1px;
+      height: 2px;
       background-color: var(--main-c);
       position: absolute;
       bottom: 0;

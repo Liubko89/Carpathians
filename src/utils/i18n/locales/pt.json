@@ -1,5 +1,53 @@
 {
-  "toursToTheCarpathiansFromLviv": "Passeios aos Cárpatos a partir de Lviv",
+  "toursToTheCarpathiansFromLviv": "Tours aos Cárpatos a partir de Lviv",
   "journeysToTheVeryHeart": "Viagens ao coração dos Cárpatos para quem quer um verdadeiro reboot",
-  "bookATour": "Reserve um tour"
+  "bookATour": "Reserve um tour",
+  "modalBookATourMessage": "Pode deixar aqui a sua inscrição e o nosso gestor entrará em contacto consigo em até 10 minutos.",
+  "bookingForm": {
+    "name": "O seu nome*",
+    "number": "Número de telefone*"
+  },
+  "tours": {
+    "ascentToHoverla": "Subida a Hoverla",
+    "skiTourToBukovel": "Passeio de esqui para Bukovel",
+    "weekInCarpathians": "Semana nos Cárpatos"
+  },
+  "nav": {
+    "aboutUs": "Sobre nós",
+    "tours": "Tours",
+    "reviews": "Avaliações",
+    "gallery": "Galeria",
+    "contacts": "Contatos"
+  },
+  "callMe": "Telefona-me",
+  "validSchema": {
+    "tooShort": "Muito curto!",
+    "tooLong": "Muito longo!",
+    "required": "Obrigatório!"
+  },
+  "aboutUs": {
+    "p1": "Viajar é a nossa vida. Organizamos excursões aos Cárpatos desde 2007 e nunca nos aborrecemos um único dia. Os Cárpatos são locais interessantes e inexplorados que vale a pena visitar e mostrar aos outros.",
+    "p2": "Visitar os Cárpatos fará com que esqueça o mundo poluído e barulhento e desfrute da natureza intocada. Desde florestas pitorescas a rios e lagos limpos e riachos dos Cárpatos entre as montanhas, que oferecem paisagens mágicas e permitem esquecer todos os problemas e pensamentos desnecessários."
+  },
+  "ourAdvantages": {
+    "title": "As nossas vantagens",
+    "authorTours": "passeios do autor",
+    "individualApproach": "abordagem individual",
+    "affordablePrices": "preços acessíveis",
+    "comfortableTransfer": "transferência confortável",
+    "professionalGuides": "guias profissionais",
+    "accommodationInHotels": "alojamento em hotéis a partir de 3+ *"
+  },
+  "upcomingTours": {
+    "title": "Próximos passeios"
+  },
+  "questions": {
+    "title": "Tem alguma dúvida?",
+    "description": "Pode deixar aqui as suas perguntas e o nosso gestor retornará a sua chamada em até 10 minutos",
+    "form": {
+      "name": "O seu nome*",
+      "number": "Número de telefone*",
+      "question": "O que gostaria de saber?"
+    }
+  }
 }

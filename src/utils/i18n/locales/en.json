@@ -1,5 +1,53 @@
 {
   "toursToTheCarpathiansFromLviv": "Tours to the Carpathians from Lviv",
   "journeysToTheVeryHeart": "Journeys to the very heart of the Carpathians for those who want a real reboot",
-  "bookATour": "Book a tour"
+  "bookATour": "Book a tour",
+  "modalBookATourMessage": "You can leave your application here and our manager will contact you within 10 minutes.",
+  "bookingForm": {
+    "name": "Your name*",
+    "number": "Phone number*"
+  },
+  "tours": {
+    "ascentToHoverla": "Ascent to Hoverla",
+    "skiTourToBukovel": "Ski tour to Bukovel",
+    "weekInCarpathians": "Week in Carpathians"
+  },
+  "nav": {
+    "aboutUs": "About us",
+    "tours": "Tours",
+    "reviews": "Reviews",
+    "gallery": "Gallery",
+    "contacts": "Contacts"
+  },
+  "callMe": "Call me",
+  "validSchema": {
+    "tooShort": "Too Short!",
+    "tooLong": "Too Long!",
+    "required": "Required!"
+  },
+  "aboutUs": {
+    "p1": "Travel is our life. We have been organizing tours to the Carpathians since 2007 and have never been bored for a single day. The Carpathians are many interesting and unexplored places that are worth visiting and showing them to others.",
+    "p2": "Coming to the Carpathians will make you forget about the polluted, noisy world and enjoy untouched nature. From picturesque forests to clean rivers and lakes and Carpathian streams between the mountains, which offer magical landscapes and allow you to forget about all problems and unnecessary thoughts."
+  },
+  "ourAdvantages": {
+    "title": "Our advantages",
+    "authorTours": "author's tours",
+    "individualApproach": "individual approach",
+    "affordablePrices": "affordable prices",
+    "comfortableTransfer": "comfortable transfer",
+    "professionalGuides": "professional guides",
+    "accommodationInHotels": "accommodation in hotels from 3+ *"
+  },
+  "upcomingTours": {
+    "title": "Upcoming tours"
+  },
+  "questions": {
+    "title": "Do you have any questions?",
+    "description": "You can leave your questions here and our manager will call you back within 10 minutes",
+    "form": {
+      "name": "Your name*",
+      "number": "Phone number*",
+      "question": "What would you like to know?"
+    }
+  }
 }
