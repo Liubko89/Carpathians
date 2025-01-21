@@ -46,6 +46,7 @@ This will create an optimized build of the application in the build folder
 
 ## Project structure
 
+```
 .
 ├── public/
 ├── src/
@@ -91,3 +92,4 @@ This will create an optimized build of the application in the build folder
 ├── README.md
 ├── vercel.json
 └── vite.config.js
+```
