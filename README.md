@@ -46,7 +46,7 @@ This will create an optimized build of the application in the build folder
 
 ## Project structure
 
-CARPATHIANS/
+carpathians/
 ├── public/
 ├── src/
 │ ├── assets/
