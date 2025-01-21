@@ -1,4 +1,4 @@
-# My React Project
+# My React Project CARPATHIANS
 
 This project is a React application built using the following technologies:
 
@@ -71,7 +71,7 @@ CARPATHIANS/
 │ │ │ ├── BookATour.jsx
 │ │ │ └── BookATour.module.css
 │ │ ├── CloseButton/
-│ │ │ ├── CloseButton.jsx
+│ │ │ └── CloseButton.jsx
 │ │ ├── Container/
 │ │ │ ├── Container.jsx
 │ │ │ └── Container.module.css
@@ -120,20 +120,57 @@ CARPATHIANS/
 │ │ ├── ReviewItem/
 │ │ │ ├── ReviewItem.jsx
 │ │ │ └── ReviewItem.module.css
-
-│ ├── i18n/
-│ │ ├── en.json
-│ │ ├── es.json
-│ │ ├── ... other language files
-│ ├── App.js
-│ ├── index.js
-│ └── styles/
-│ └── globals.css
+│ │ ├── Reviews/
+│ │ │ ├── Reviews.jsx
+│ │ │ └── Reviews.module.css
+│ │ ├── ScrollToTopBtn/
+│ │ │ ├── ScrollToTopBtn.jsx
+│ │ │ └── ScrollToTopBtn.module.css
+│ │ ├── SlickCarousel/
+│ │ │ └── SlickCarousel.jsx
+│ │ ├── SliderArrow/
+│ │ │ ├── SliderArrow.jsx
+│ │ │ └── SliderArrow.module.css
+│ │ ├── SocialMediaLinks/
+│ │ │ ├── SocialMediaLinks.jsx
+│ │ │ └── SocialMediaLinks.module.css
+│ │ ├── TourDetails/
+│ │ │ ├── TourDetails.jsx
+│ │ │ └── TourDetails.module.css
+│ │ ├── TourDetailsSliderArrow/
+│ │ │ ├── TourDetailsSliderArrow.jsx
+│ │ │ └── TourDetailsSliderArrow.module.css
+│ │ ├── UpcomingTour/
+│ │ │ ├── UpcomingTour.jsx
+│ │ │ └── UpcomingTour.module.css
+│ │ ├── UpcomingTours/
+│ │ │ ├── UpcomingTours.jsx
+│ │ │ └── UpcomingTours.module.css
+│ ├── css/
+│ │ ├── additional.css
+│ │ ├── fonts.css
+│ │ ├── index.css
+│ │ ├── reset.css
+│ │ └── variables.css
+│ ├── helpers/
+│ │ ├── galleryImg.js
+│ │ ├── notification.js
+│ │ ├── reviews.js
+│ │ ├── schema.js
+│ │ └── tours.js
+│ ├── utils/
+│ │ └── i18n/
+│ │ ├── locales/
+│ │ | ├── en.json
+│ │ | └── pt.json
+│ │ └── index.js
+│ ├── App.jsx
+│ └── main.jsx
 ├── .eslintrc.cjs
 ├── .gitignore
 ├── index.html
 ├── package-lock.json
 ├── package.json
-└── README.md
-└── vercel.json
+├── README.md
+├── vercel.json
 └── vite.config.js
