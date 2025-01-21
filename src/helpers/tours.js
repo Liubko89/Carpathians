@@ -108,7 +108,7 @@ import { nanoid } from "nanoid";
 const tours = [
   {
     id: nanoid(),
-    name: "Ascent to Hoverla",
+    name: "tours.ascentToHoverla",
     alt: "image of Hoverla",
     price: 4.999,
     mobImage: hoverla,
@@ -119,7 +119,7 @@ const tours = [
     deskImage2x: hoverlaDesk_2x,
     moreDetails: [
       {
-        day: "1 day",
+        day: "1",
         bgImage: hoverla1Day,
         bgImage2x: hoverla1Day_2x,
         bgImageTab: hoverla1DayTab,
@@ -137,7 +137,7 @@ const tours = [
         ],
       },
       {
-        day: "2 day",
+        day: "2",
         bgImage: hoverla2Day,
         bgImage2x: hoverla2Day_2x,
         bgImageTab: hoverla2DayTab,
@@ -154,7 +154,7 @@ const tours = [
         ],
       },
       {
-        day: "3 day",
+        day: "3",
         bgImage: hoverla3Day,
         bgImage2x: hoverla3Day_2x,
         bgImageTab: hoverla3DayTab,
@@ -173,7 +173,7 @@ const tours = [
   },
   {
     id: nanoid(),
-    name: "Ski tour to Bukovel",
+    name: "tours.skiTourToBukovel",
     alt: "image of Bukovel",
     price: 7.499,
     mobImage: bukovel,
@@ -184,7 +184,7 @@ const tours = [
     deskImage2x: bukovelDesk_2x,
     moreDetails: [
       {
-        day: "1 day",
+        day: "1",
         bgImage: bukovel1Day,
         bgImage2x: bukovel1Day_2x,
         bgImageTab: bukovel1DayTab,
@@ -202,7 +202,7 @@ const tours = [
         ],
       },
       {
-        day: "2 day",
+        day: "2",
         bgImage: bukovel2Day,
         bgImage2x: bukovel2Day_2x,
         bgImageTab: bukovel2DayTab,
@@ -219,7 +219,7 @@ const tours = [
         ],
       },
       {
-        day: "3 day",
+        day: "3",
         bgImage: bukovel3Day,
         bgImage2x: bukovel3Day_2x,
         bgImageTab: bukovel3DayTab,
@@ -236,7 +236,7 @@ const tours = [
         ],
       },
       {
-        day: "4 day",
+        day: "4",
         bgImage: bukovel4Day,
         bgImage2x: bukovel4Day_2x,
         bgImageTab: bukovel4DayTab,
@@ -256,7 +256,7 @@ const tours = [
   },
   {
     id: nanoid(),
-    name: "Week in Carpathians",
+    name: "tours.weekInCarpathians",
     alt: "image of Carpathians",
     price: 9.499,
     mobImage: carpathians,
@@ -267,7 +267,7 @@ const tours = [
     deskImage2x: carpathiansDesk_2x,
     moreDetails: [
       {
-        day: "1 day",
+        day: "1",
         bgImage: carpathians1Day,
         bgImage2x: carpathians1Day_2x,
         bgImageTab: carpathians1DayTab,
@@ -284,7 +284,7 @@ const tours = [
         ],
       },
       {
-        day: "2 day",
+        day: "2",
         bgImage: carpathians2Day,
         bgImage2x: carpathians2Day_2x,
         bgImageTab: carpathians2DayTab,
@@ -294,14 +294,14 @@ const tours = [
         activities: [
           "Breakfast",
           "Lake Synevyr",
-          'Ecopark "Valley of Wolves"',
+          "Ecopark Valley of Wolves",
           "Lunch",
           "Excursion to Kolochava",
           "Dinner",
         ],
       },
       {
-        day: "3 day",
+        day: "3",
         bgImage: carpathians3Day,
         bgImage2x: carpathians3Day_2x,
         bgImageTab: carpathians3DayTab,
@@ -317,7 +317,7 @@ const tours = [
         ],
       },
       {
-        day: "4 day",
+        day: "4",
         bgImage: carpathians4Day,
         bgImage2x: carpathians4Day_2x,
         bgImageTab: carpathians4DayTab,
@@ -333,7 +333,7 @@ const tours = [
         ],
       },
       {
-        day: "5 day",
+        day: "5",
         bgImage: carpathians5Day,
         bgImage2x: carpathians5Day_2x,
         bgImageTab: carpathians5DayTab,
@@ -343,7 +343,7 @@ const tours = [
         activities: ["Breakfast", "Ascent to Hoverla", "Recreation", "Dinner"],
       },
       {
-        day: "6 day",
+        day: "6",
         bgImage: carpathians6Day,
         bgImage2x: carpathians6Day_2x,
         bgImageTab: carpathians6DayTab,
@@ -352,14 +352,14 @@ const tours = [
         bgImageDesk2x: carpathians6DayDesk_2x,
         activities: [
           "Breakfast",
-          'Hut-museum from the "Shadows of Forgotten Ancestors"',
+          "Hut-museum from the Shadows of Forgotten Ancestors",
           "Lunch",
           "Rafting of free time",
           "Dinner",
         ],
       },
       {
-        day: "7 day",
+        day: "7",
         bgImage: carpathians7Day,
         bgImage2x: carpathians7Day_2x,
         bgImageTab: carpathians7DayTab,

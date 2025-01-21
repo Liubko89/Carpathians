@@ -2,6 +2,7 @@ import css from "./TourDetails.module.css";
 import SlickCarousel from "../SlickCarousel/SlickCarousel";
 import { nanoid } from "nanoid";
 import CloseButton from "../CloseButton/CloseButton";
+import { useTranslation } from "react-i18next";
 
 const TourDetails = ({
   tour,
@@ -10,6 +11,7 @@ const TourDetails = ({
   closeModal,
   checkTour,
 }) => {
+  const { t } = useTranslation();
   const handlClick = () => {
     checkTour(tour.name);
     closeModal();
@@ -59,13 +61,15 @@ const TourDetails = ({
                     backgroundSize: "cover",
                   }}
                 >
-                  <h3 className={css.tourTitle}>{tour.name}</h3>
-                  <p className={css.tourDay}>{day}</p>
+                  <h3 className={css.tourTitle}>{t(tour.name)}</h3>
+                  <p className={css.tourDay}>
+                    {day} {t("day")}
+                  </p>
                   <ul className={css.activitiesList}>
                     {activities.map((activity) => {
                       return (
                         <li className={css.activitiesItem} key={nanoid()}>
-                          <p>{activity}</p>
+                          <p>{t(activity)}</p>
                         </li>
                       );
                     })}
@@ -78,10 +82,10 @@ const TourDetails = ({
       </SlickCarousel>
       <div className={css.priceWrapper}>
         <p className={css.tourPrice}>
-          <span className={css.currency}>uah</span> {tour.price}/person
+          <span className={css.currency}>uah</span> {tour.price}/{t("person")}
         </p>
         <button className="btn" type="button" onClick={handlClick}>
-          book a tour
+          {t("bookATour")}
         </button>
       </div>
     </div>

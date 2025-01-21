@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import css from "./UpcomingTour.module.css";
 
 const UpcomingTour = ({ openModal, tour, chooseTour }) => {
+  const { t } = useTranslation();
   const handleClick = () => {
     openModal();
     chooseTour(tour.id);
@@ -25,10 +27,12 @@ const UpcomingTour = ({ openModal, tour, chooseTour }) => {
       </picture>
 
       <div className={css.descrWrapper}>
-        <h3 className={css.subTitle}>{tour.name}</h3>
-        <p className={css.descr}>From UAH {tour.price}/person</p>
+        <h3 className={css.subTitle}>{t(tour.name)}</h3>
+        <p className={css.descr}>
+          {t("from")} UAH {tour.price}/{t("person")}
+        </p>
         <button className={css.btn} type="button" onClick={handleClick}>
-          More Details
+          {t("moreDetails")}
         </button>
       </div>
     </div>
