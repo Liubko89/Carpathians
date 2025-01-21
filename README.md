@@ -50,19 +50,19 @@ carpathians/
 ├── public/
 ├── src/
 │ ├── assets/
-| | ├──fonts/
-| | | ├── montserratMedium500.ttf
-| | | ├── montserratRegular400.ttf
-| | | ├── montserratSemiBold600.ttf
-| | ├──img/
-| | | ├──desk1x/
-| | | ├──desk2x/
-| | | ├──mob1x/
-| | | ├──mob2x/
-| | | ├──tab1x/
-| | | ├──tab2x/
-| | ├── favicon.svg
-| | ├── icons.svg
+│ │ ├──fonts/
+│ │ │ ├── montserratMedium500.ttf
+│ │ │ ├── montserratRegular400.ttf
+│ │ │ └── montserratSemiBold600.ttf
+│ │ ├──img/
+│ │ │ ├──desk1x/
+│ │ │ ├──desk2x/
+│ │ │ ├──mob1x/
+│ │ │ ├──mob2x/
+│ │ │ ├──tab1x/
+│ │ │ └──tab2x/
+│ │ ├── favicon.svg
+│ │ └── icons.svg
 │ ├── components/
 │ │ ├── AboutUs/
 │ │ │ ├── AboutUs.jsx
@@ -153,16 +153,16 @@ carpathians/
 │ │ ├── reset.css
 │ │ └── variables.css
 │ ├── helpers/
-│ | ├── galleryImg.js
-│ | ├── notification.js
-│ | ├── reviews.js
-│ | ├── schema.js
-│ | └── tours.js
+│ │ ├── galleryImg.js
+│ │ ├── notification.js
+│ │ ├── reviews.js
+│ │ ├── schema.js
+│ │ └── tours.js
 │ ├── utils/
 │ │ └── i18n/
 │ │ ├── locales/
-│ │ | ├── en.json
-│ │ | └── pt.json
+│ │ │ ├── en.json
+│ │ │ └── pt.json
 │ │ └── index.js
 │ ├── App.jsx
 │ └── main.jsx
