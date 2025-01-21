@@ -50,17 +50,17 @@ CARPATHIANS/
 ├── public/
 ├── src/
 │ ├── assets/
-| | ├──fonts
+| | ├──fonts/
 | | | ├── montserratMedium500.ttf
 | | | ├── montserratRegular400.ttf
 | | | ├── montserratSemiBold600.ttf
-| | ├──img
-| | | ├──desk1x_Images
-| | | ├──desk2x_Images
-| | | ├──mob1x_Images
-| | | ├──mob2x_Images
-| | | ├──tab1x_Images
-| | | ├──tab2x_Images
+| | ├──img/
+| | | ├──desk1x/
+| | | ├──desk2x/
+| | | ├──mob1x/
+| | | ├──mob2x/
+| | | ├──tab1x/
+| | | ├──tab2x/
 | | ├── favicon.svg
 | | ├── icons.svg
 │ ├── components/
@@ -153,11 +153,11 @@ CARPATHIANS/
 │ │ ├── reset.css
 │ │ └── variables.css
 │ ├── helpers/
-│ │ ├── galleryImg.js
-│ │ ├── notification.js
-│ │ ├── reviews.js
-│ │ ├── schema.js
-│ │ └── tours.js
+│ | ├── galleryImg.js
+│ | ├── notification.js
+│ | ├── reviews.js
+│ | ├── schema.js
+│ | └── tours.js
 │ ├── utils/
 │ │ └── i18n/
 │ │ ├── locales/
