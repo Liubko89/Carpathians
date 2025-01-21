@@ -69,7 +69,7 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
                 className={clsx(css.visuallyHidden, css.checkbox)}
                 type="checkbox"
                 name="tours"
-                value="Ascent to Hoverla"
+                value="tours.ascentToHoverla"
                 checked={checkedTours.includes("tours.ascentToHoverla")}
                 onChange={handleCheckboxChange}
               />
@@ -85,7 +85,7 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
                 className={clsx(css.visuallyHidden, css.checkbox)}
                 type="checkbox"
                 name="tours"
-                value="Ski tour to Bukovel"
+                value="tours.skiTourToBukovel"
                 checked={checkedTours.includes("tours.skiTourToBukovel")}
                 onChange={handleCheckboxChange}
               />
@@ -101,7 +101,7 @@ const BookATour = ({ closeModal, checkedTours, handleCheckboxChange }) => {
                 className={clsx(css.visuallyHidden, css.checkbox)}
                 type="checkbox"
                 name="tours"
-                value="Week in Carpathians"
+                value="tours.weekInCarpathians"
                 checked={checkedTours.includes("tours.weekInCarpathians")}
                 onChange={handleCheckboxChange}
               />
